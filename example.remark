@@ -1,0 +1,23 @@
+---
+layout: presentation
+title: Example Presentation
+permalink: /example
+---
+class: center, middle
+
+# Example Presentation
+
+## Using Remark
+
+---
+
+# .center[Example Presentation]
+
+## .center[Using Remark and Jekyll]
+
+This example presentation uses [remarkjs][remark] to create the presentation.
+
+The slides are generated into pages by [jekyll][jekyll].
+
+[remark]: https://github.com/gnab/remark "gnab/remark on GitHub"
+[jekyll]: https://jekyllrb.com/ "jekyll official site"
