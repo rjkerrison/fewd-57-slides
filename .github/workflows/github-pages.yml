@@ -6,21 +6,13 @@ on:
       - master
 
 jobs:
-  build:
+  github-pages:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Build Jekyll site
-        run: |
-          gem install jekyll
-          jekyll build
-
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.1.2
-        with:
-          target_branch: gh-pages
-          build_dir: _site
+        uses: helaili/jekyll-action@2.0.1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
