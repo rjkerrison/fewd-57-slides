@@ -9,6 +9,6 @@ Check out all the pages we've got:
 
 {% for page in site.pages %}
 {% if page.title != nil %}
-- [{{page.title}}]({{page.url}})
+- [{{page.title}}]({{site.baseurl}}{{page.url}})
 {% endif %}
 {% endfor %}
