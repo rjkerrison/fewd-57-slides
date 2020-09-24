@@ -4,22 +4,35 @@
     <meta charset="utf-8" />
     <title>{{ page.title | strip_html }}</title>
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Oxygen);
+      @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
       body {
-        font-family: "Droid Serif";
+        font-family: 'Lato';
       }
       h1,
       h2,
       h3 {
-        font-family: "Yanone Kaffeesatz";
+        font-family: 'Oxygen';
         font-weight: normal;
       }
       .remark-code,
       .remark-inline-code {
-        font-family: "Ubuntu Mono";
+        font-family: 'Ubuntu Mono';
+      }
+
+      blockquote {
+        font-style: italic;
+        background-color: rgb(242, 233, 162);
+        margin: 0;
+        padding: 0.5rem 1.5rem;
+      }
+      blockquote .attribute {
+        text-align: right;
+        width: 50%;
+        position: relative;
+        right: -45%;
       }
     </style>
   </head>
@@ -32,7 +45,8 @@
       const slideshow = remark.create({
         navigation: { scroll: false },
         source: `{{ content }}`,
-      });
+        countIncrementalSlides: false,
+      })
     </script>
   </body>
 </html>

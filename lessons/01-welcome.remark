@@ -1,0 +1,157 @@
+---
+layout: presentation
+title: Welcome to FEWD 57
+---
+
+name: template
+
+.center[
+# FEWD 57
+]
+
+---
+
+template: template
+layout: true
+
+## Welcome
+---
+
+Welcome to the class!
+--
+
+
+If you're looking for Geography 101,
+that's down the hall to the left.
+We really ought to fix the campus maps.
+
+---
+
+template: template
+layout: true
+
+## Introductions
+---
+
+I'm Robin.
+I look like this (and wave).
+I'll be your instructor for the next 10 weeks.
+
+--
+
+A bit of background:
+
+- I've been coding since 12
+--
+
+- I've been teaching one-to-one and small groups since 15
+--
+
+- Someone's been paying me to code since 20
+--
+
+- I've been with General Assembly since July 2020
+--
+
+  - recent!
+
+---
+
+I'm the Assistant.
+
+---
+
+.center[
+### You
+]
+
+Introduce yourself to the class, answering the _who_, the _why_, and the _where_.
+
+--
+
+- Who are you?
+--
+
+- Why are you here today?
+--
+
+- Where are you hoping this course will take you?
+
+---
+
+template: template
+layout: true
+
+## Things to remember about learning
+---
+
+Throughout this course, you will be
+
+- frustrated
+- confused
+- satisfied
+
+--
+
+Learning is always an emotional experience.
+
+---
+
+> Statistically, the second source you read is the most helpful.
+--
+
+>
+> .attribute[
+&ndash; a statistics professor whose name I've forgotten
+]
+
+---
+
+template: template
+layout: true
+
+## Expectations
+
+---
+
+I expect you to ask questions. 
+--
+There are four reasons students don't ask questions:
+--
+
+1. They understand everything.
+--
+
+2. They think they're the only one who doesn't understand.
+--
+
+1. They're not sure how to phrase the question.
+--
+
+4. They understand nothing at all.
+---
+
+You expect me and _assistant_ to…
+
+---
+
+template: template
+layout: true
+
+## Course overview
+---
+
+Today
+
+- introductions
+- goals
+- course outline
+- _installez-vous_
+
+--
+
+
+Wednesday
+
+- basics of **H**yper**T**ext **M**arkup **L**anguage
+- exercises
