@@ -107,7 +107,7 @@ It tells the web browser what **type of document** (hence the name) this file is
 --
 
 
-In our cases, it will always be \`<!DOCTYPE html>\`.
+In our cases, it will always be `<!DOCTYPE html>`.
 
 ---
 
@@ -127,8 +127,8 @@ In our cases, it will always be \`<!DOCTYPE html>\`.
 
 --
 
-Now that we've told the browser we have an \`html\` document type,
-we indicate where all the \`html\` is: inside the \`<html>\` tag.
+Now that we've told the browser we have an `html` document type,
+we indicate where all the `html` is: inside the `<html>` tag.
 --
 
 
