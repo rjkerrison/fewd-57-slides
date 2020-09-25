@@ -69,9 +69,9 @@ name: example
 Enough chat! Let's see what the fuss is about.
 --
 
-\`\`\`html
+```html
 {% include basic-example.html %}
-\`\`\`
+```
 
 --
 
@@ -85,7 +85,7 @@ layout: true
 Let's take a deeper look.
 ---
 
-\`\`\`html
+```html
 *<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -97,7 +97,7 @@ Let's take a deeper look.
     <p>Hello, FEWD 57!</p>
   </body>
 </html>
-\`\`\`
+```
 
 --
 
@@ -111,7 +111,7 @@ In our cases, it will always be \`<!DOCTYPE html>\`.
 
 ---
 
-\`\`\`html
+```html
 <!DOCTYPE html>
 *<html lang="en">
   <head>
@@ -123,7 +123,7 @@ In our cases, it will always be \`<!DOCTYPE html>\`.
     <p>Hello, FEWD 57!</p>
   </body>
 </html>
-\`\`\`
+```
 
 --
 
@@ -143,85 +143,3 @@ Yes, well done <input type="text" placeholder="Name" name="name" />!
 Check out _[une petite exemple]({{ site.baseurl }}/exemple)_.
 ---
 
-
-
-- Where are you hoping this course will take you?
-
----
-
-template: template
-layout: true
-
-## Things to remember about learning
----
-
-Throughout this course, you will be
-
-- frustrated
-- confused
-- satisfied
-
---
-
-Learning is always an emotional experience.
-
----
-
-> Statistically, the second source you read is the most helpful.
---
-
->
-> .attribute[
-&ndash; a statistics professor whose name I've forgotten
-]
-
----
-
-template: template
-layout: true
-
-## Expectations
-
----
-
-I expect you to ask questions. 
---
-There are four reasons students don't ask questions:
---
-
-1. They understand everything.
---
-
-2. They think they're the only one who doesn't understand.
---
-
-1. They're not sure how to phrase the question.
---
-
-4. They understand nothing at all.
----
-
-You expect me and _assistant_ to…
-
----
-
-template: template
-layout: true
-
-## Course overview
----
-
-Today
-
-- introductions
-- goals
-- course outline
-- _installez-vous_
-
---
-
-
-Wednesday
-
-- basics of **H**yper**T**ext **M**arkup **L**anguage
-- exercises
