@@ -122,7 +122,7 @@ In our cases, it will always be `<!DOCTYPE html>`.
   <body>
     <p>Hello, FEWD 57!</p>
   </body>
-</html>
+*</html>
 ```
 
 --
@@ -141,5 +141,48 @@ Why might we do that?
 
 Yes, well done <input type="text" placeholder="Name" name="name" />!
 Check out _[une petite exemple]({{ site.baseurl }}/exemple)_.
+
 ---
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+* <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+* </head>
+  <body>
+    <p>Hello, FEWD 57!</p>
+  </body>
+</html>
+```
+
+--
+
+
+The `<head>` is where we have information that isn't part of the displayed document.
+
+It's further information that's helpful to browsers.
+
+---
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+  </head>
+* <body>
+    <p>Hello, FEWD 57!</p>
+* </body>
+</html>
+```
+
+--
+
+
+The `<body>`, by contrast, is where we keep everything we want users to see.
 
