@@ -22,8 +22,8 @@ title: Jekyll Remark Slides Website
 description: >- # this means to ignore newlines until "baseurl:"
   View the source code for this site on GitHub.
   Fork it on GitHub to create your own slideshow collection.
-baseurl: "/jekyll-remark-site" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '/fewd-57-slides' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: robinjames_
 github_username: rjkerrison
 

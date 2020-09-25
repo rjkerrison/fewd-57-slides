@@ -6,7 +6,7 @@ layout: home
 ---
 
 This is a website which houses many slideshows, hosted on GitHub Pages.
-This is generated from a repository [_rjkerrison/jekyll-remark-site_][jekyll-remark-site]
+This is generated from a repository [_rjkerrison/fewd-57-slides_][fewd-57-slides]
 which houses the basics for creating a website repository of presentations.
 Fork it on GitHub.
 
@@ -23,4 +23,4 @@ This website contains the following presentations:
 
 [remark]: https://github.com/gnab/remark "gnab/remark on GitHub"
 [jekyll]: https://jekyllrb.com/ "jekyll official site"
-[jekyll-remark-site]: https://github.com/rjkerrison/jekyll-remark-site "rjkerrison/jekyll-remark-site on GitHub"
+[fewd-57-slides]: https://github.com/rjkerrison/fewd-57-slides "rjkerrison/fewd-57-slides on GitHub"

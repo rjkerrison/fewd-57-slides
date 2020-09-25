@@ -1,0 +1,227 @@
+---
+layout: presentation
+title: HTML
+---
+
+class: title center middle
+
+# Welcome to FEWD 57
+
+---
+
+layout: true
+name: template
+
+.header[
+# FEWD 57
+]
+
+---
+
+template: template
+layout: true
+
+## HyperText Markup Language
+---
+
+**H**yper**T**ext **M**arkup **L**anguage is the language with which we create documents.
+--
+
+
+We're lazy, so we call it **HTML**.
+--
+
+
+It's called **hypertext** because it is **better than regular old text**.
+--
+
+
+It's closely related to **HTTP** and **HTTPS**,
+or **H**yper**T**ext **T**ransfer **P**rotocol (**S**ecure)
+--
+
+
+**Hypertext** is **better than regular old text** because it allows us to add…
+--
+
+- links!
+--
+
+- structure
+--
+
+- meta information
+--
+
+- styling (using CSS)
+--
+
+- functionality (using JS)
+---
+
+template: template
+layout: true
+name: example
+
+## An example
+---
+
+Enough chat! Let's see what the fuss is about.
+--
+
+\`\`\`html
+{% include basic-example.html %}
+\`\`\`
+
+--
+
+This would look an awful lot like [this webpage]({{site.baseurl}}/example).
+
+---
+
+template: example
+layout: true
+
+Let's take a deeper look.
+---
+
+\`\`\`html
+*<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+  </head>
+  <body>
+    <p>Hello, FEWD 57!</p>
+  </body>
+</html>
+\`\`\`
+
+--
+
+
+This is the **doctype** declaration.
+It tells the web browser what **type of document** (hence the name) this file is.
+--
+
+
+In our cases, it will always be \`<!DOCTYPE html>\`.
+
+---
+
+\`\`\`html
+<!DOCTYPE html>
+*<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+  </head>
+  <body>
+    <p>Hello, FEWD 57!</p>
+  </body>
+</html>
+\`\`\`
+
+--
+
+Now that we've told the browser we have an \`html\` document type,
+we indicate where all the \`html\` is: inside the \`<html>\` tag.
+--
+
+
+We also let the browser know that the language (**lang**) of the information in this document
+is English. 
+--
+Why might we do that?
+--
+
+
+Yes, well done <input type="text" placeholder="Name" name="name" />!
+Check out _[une petite exemple]({{ site.baseurl }}/exemple)_.
+---
+
+
+
+- Where are you hoping this course will take you?
+
+---
+
+template: template
+layout: true
+
+## Things to remember about learning
+---
+
+Throughout this course, you will be
+
+- frustrated
+- confused
+- satisfied
+
+--
+
+Learning is always an emotional experience.
+
+---
+
+> Statistically, the second source you read is the most helpful.
+--
+
+>
+> .attribute[
+&ndash; a statistics professor whose name I've forgotten
+]
+
+---
+
+template: template
+layout: true
+
+## Expectations
+
+---
+
+I expect you to ask questions. 
+--
+There are four reasons students don't ask questions:
+--
+
+1. They understand everything.
+--
+
+2. They think they're the only one who doesn't understand.
+--
+
+1. They're not sure how to phrase the question.
+--
+
+4. They understand nothing at all.
+---
+
+You expect me and _assistant_ to…
+
+---
+
+template: template
+layout: true
+
+## Course overview
+---
+
+Today
+
+- introductions
+- goals
+- course outline
+- _installez-vous_
+
+--
+
+
+Wednesday
+
+- basics of **H**yper**T**ext **M**arkup **L**anguage
+- exercises
