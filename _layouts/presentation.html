@@ -59,6 +59,19 @@
       h2 {
         text-align: center;
       }
+
+      input[type='text'] {
+        font-size: inherit;
+        font-family: inherit;
+        border-width: 0 0 0.125rem 0;
+      }
+      input[type='text']:focus {
+        outline: none;
+        border-bottom: rgb(218, 1, 1) 0.25rem solid;
+      }
+      .remark-code-line-highlighted {
+        background-color: rgba(200, 241, 185, 0.5);
+      }
     </style>
   </head>
   <body>
@@ -73,6 +86,13 @@
         countIncrementalSlides: false,
         ratio: '16:9',
         highlightLines: true,
+        highlightStyle: 'github'
+      })
+
+      document.querySelectorAll('.remark-slide input').forEach(el => {
+        el.addEventListener('keypress', (event) => {
+          event.stopPropagation()
+        })
       })
     </script>
   </body>
