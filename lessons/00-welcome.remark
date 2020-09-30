@@ -5,8 +5,12 @@ title: Welcome to FEWD 57
 
 name: template
 
-.center[
-# FEWD 57
+.logo[
+  <picture>
+    <img alt="logo" src="{{ site.baseurl }}/assets/ga-logo-red-256x256.png" />
+  </picture>
+
+  # FEWD 57
 ]
 
 ---
@@ -30,7 +34,14 @@ We really ought to fix the campus maps.
 Use this opportunity to talk about working remote.
 Explain about breakout rooms, and your experience
 with how smaller groups work better than individuals or large groups.
+--
 
+
+This is…
+
+.center[
+  ### Front-End Web Development
+]
 ---
 
 template: template
@@ -39,9 +50,17 @@ layout: true
 ## Introductions
 ---
 
+class: grid-2
+
 I'm Robin.
 I look like this.
 I'll be your instructor for the next 10 weeks.
+
+.grid-column-2[
+  <picture>
+    <img alt="me in paris" src="{{ site.baseurl }}/assets/me-in-paris.jpg" />
+  </picture>
+]
 
 --
 
@@ -54,6 +73,9 @@ A bit of background:
 --
 
 - Someone's been paying me to code since I was 20
+--
+
+- Currently a Software Engineer at Red Badger
 --
 
 - I've been with General Assembly since July 2020
@@ -82,7 +104,10 @@ Introduce yourself to the class, answering the _who_, the _why_, and the _where_
 --
 
 - Where are you hoping this course will take you?
+--
 
+- Go to the [Random Year Generator](https://pataruco.github.io/ga-fewd-assets/random-year/index.html) to get a year,
+  and give us an anecdote from that year
 ---
 
 template: template
@@ -154,10 +179,12 @@ Today
 - course outline
 - time to install, setup our machines
 
---
-
-
-Wednesday
+Also today
 
 - basics of **H**yper**T**ext **M**arkup **L**anguage
+- exercises
+
+Next Lesson
+
+- basics of **C**ascading **S**tyle **S**heets
 - exercises

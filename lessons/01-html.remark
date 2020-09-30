@@ -18,6 +18,16 @@ name: template
 
 ---
 
+## Lesson 1
+
+Our Learning Goals:
+
+- Choose semantic HTML tags to define and organise content.
+- Use CSS to apply style to web pages.
+- Learn the basics of CSS syntax, including selectors and style rules.
+
+---
+
 template: template
 layout: true
 
