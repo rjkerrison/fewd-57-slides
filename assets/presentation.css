@@ -111,6 +111,9 @@ picture > img {
 .grid-column-2 {
   grid-column: 2;
 }
+.grid-row-span-3 {
+  grid-row-end: span 3;
+}
 .grid-column-span-2 {
   grid-column-end: span 2;
 }
