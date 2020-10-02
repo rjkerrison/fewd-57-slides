@@ -351,7 +351,12 @@ Similarly, a `src` attribute on an `<a>` tag will be ignored.
 
 ---
 
+template: template
+layout: true
+
 ## How to be a spy
+
+---
 
 As developers,
 we don't need a trench coat and a magnifying glass to
@@ -359,6 +364,100 @@ inspect other websites.
 
 We can use the **element inspector**.
 
+{% include asset-image.html
+  alt="Preview of a right-click to inspect the element."
+  image_file="01-html/element-inspector-right-click.png"
+%}
+
+---
+
+.task[
 Pick your favourite website, and identify three tags on it.
+]
 
 This is really useful, as a way to understand how other websites work.
+
+You can look at how another website has used HTML and CSS using the inspector,
+and it can help you to check or modify your own websites.
+
+To view the HTML structure of your chosen page, right click on any element and choose **Inspect Element**. This will open the element inspector part of the developer tools in Firefox or Chrome. 
+
+From here, you can view and edit the HTML structure underlying the page.
+
+Use resources such as [**MDN** (Mozilla Developer Network)][mdn]
+to get a sense of what the tag means and its most common use cases.
+
+---
+
+template: template
+layout: true
+
+## Structure of HTML
+
+---
+
+HTML provides the structure and the content of the webpage.
+
+How should we think about the structure of HTML?
+
+--
+
+### Like a tree!
+
+Our `<html>` tag is the very root of the tree.
+It branches off into two smaller sections: `<head>` and `<body>`.
+
+Inside `<head>` we might have a few `<meta>` and `<link>` leaves,
+as well as the `<title>` leaf.
+
+Inside `<body>`, things can get very complicated.
+We can have simple `<h1>` leaves, or `<p>` branches with `<a>` leaves inside them.
+
+---
+
+class: grid-2
+
+.group[
+### A _family_ tree
+
+Instead of talking about _leaves_ and _branches_ when referring to an
+HTML document, we talk about **parents**, **children**, and **siblings**.
+]
+--
+
+<picture>
+{% include svg/sibling-diagram.svg %}
+</picture>
+
+---
+
+.task[
+Identify a parent-child relationship and
+a sibling-sibling relationship in the HTML below.
+]
+
+```html
+<body>
+  <h1>I Am A Tree</h1>
+  <main>
+    <p>
+      I woke up one day to discover I was a tree.
+      I checked myself for all the indicators of being a tree.
+    </p>
+    <ul>
+      <li>Leaves</li>
+      <li>Branches</li>
+      <li>Trunk</li>
+      <li>Roots</li>
+      <li>Squirrels</li>
+      <li>Nuts</li>
+    </ul>
+  </main>
+</body>
+```
+
+---
+
+
+
+[mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
