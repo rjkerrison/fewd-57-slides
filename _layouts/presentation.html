@@ -3,127 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <title>{{ page.title | strip_html }}</title>
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Oxygen);
-      @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: 'Lato';
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: 'Oxygen';
-        font-weight: normal;
-      }
-      .remark-code,
-      .remark-inline-code {
-        font-family: 'Ubuntu Mono';
-      }
-
-      blockquote {
-        font-style: italic;
-        background-color: rgb(242, 233, 162);
-        margin: 0;
-        padding: 0.5rem 1.5rem;
-      }
-      blockquote .attribute {
-        text-align: right;
-        width: 50%;
-        position: relative;
-        right: -45%;
-      }
-      .title {
-        background: rgb(218, 1, 1);
-        color: white;
-      }
-      .title h1 {
-        text-decoration: underline;
-        text-underline-offset: 0.5rem;
-        text-decoration-thickness: 0.25rem;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-      }
-      .header::after {
-        content: 'GA';
-        display: block;
-      }
-      h2 {
-        text-align: center;
-      }
-
-      input[type='text'] {
-        font-size: inherit;
-        font-family: inherit;
-        border-width: 0 0 0.125rem 0;
-      }
-      input[type='text']:focus {
-        outline: none;
-        border-bottom: rgb(218, 1, 1) 0.25rem solid;
-      }
-      .remark-code-line-highlighted {
-        background-color: rgba(200, 241, 185, 0.5);
-      }
-      .logo {
-        position: absolute;
-        left: 1rem;
-        bottom: 2.5rem;
-        display: flex;
-        align-items: center;
-      }
-      .logo h1 {
-        margin: 0 0.5rem;
-        font-size: 1.5rem;
-      }
-      .logo picture {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-      picture > img {
-        max-width: 100%;
-        height: auto;
-      }
-      .grid-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        padding-bottom: 100%;
-      }
-      .grid-column-2 {
-        grid-column: 2;
-      }
-      h2 {
-        grid-column: 1 / -1;
-      }
-    </style>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/presentation.css" />
   </head>
   <body>
     <script
-      src="{{site.baseurl}}/assets/remark.min.js"
+      src="{{ site.baseurl }}/assets/remark.min.js"
       type="text/javascript"
     ></script>
     <script type="text/javascript">
+      // eslint-disable
+      const sourceContent = `{{ content | replace: "`", "\\`" }}`
+    </script>
+    <script type="text/javascript">
       const slideshow = remark.create({
         navigation: { scroll: false },
-        source: `{{ content | replace: "`", "\\`" }}`,
+        source: sourceContent,
         countIncrementalSlides: false,
         ratio: '16:9',
         highlightLines: true,
-        highlightStyle: 'github'
+        highlightStyle: 'github',
       })
 
-      document.querySelectorAll('.remark-slide input').forEach(el => {
+      document.querySelectorAll('.remark-slide input').forEach((el) => {
         el.addEventListener('keypress', (event) => {
           event.stopPropagation()
         })

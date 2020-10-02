@@ -5,16 +5,14 @@ title: HTML
 
 class: title center middle
 
-# Welcome to FEWD 57
+# Introduction to HTML
 
 ---
 
 layout: true
 name: template
 
-.header[
-# FEWD 57
-]
+{% include fewd-57-template.remark %}
 
 ---
 
@@ -22,9 +20,9 @@ name: template
 
 Our Learning Goals:
 
-- Choose semantic HTML tags to define and organise content.
-- Use CSS to apply style to web pages.
-- Learn the basics of CSS syntax, including selectors and style rules.
+- Create HTML documents using common element tags.
+- Inspect web pages using the browser’s developer tools.
+- Describe the relationship between HTML, CSS, and JavaScript in websites.
 
 ---
 
@@ -67,6 +65,20 @@ or **H**yper**T**ext **T**ransfer **P**rotocol (**S**ecure)
 --
 
 - functionality (using JS)
+---
+
+.acronym-initial[C]ascading .acronym-initial[S]tyle.acronym-initial[S]heets provide styling,
+and .acronym-initial[J]ava.acronym-initial[S]cript provides functionality.
+What comes before those, what the HTML has to define, can be thought of as **structure**.
+
+--
+
+
+### A loose analogy
+
+HTML is the brickwork, the shape, the windows and the fittings. CSS is wallpaper and decorations.
+JS is all the appliances, all the functional parts you can change by interacting with them.
+
 ---
 
 template: template
@@ -138,11 +150,11 @@ In our cases, it will always be `<!DOCTYPE html>`.
 --
 
 Now that we've told the browser we have an `html` document type,
-we indicate where all the `html` is: inside the `<html>` tag.
---
+we indicate where all our HTML is: inside the `<html>` tag!
 
 
-We also let the browser know that the language (**lang**) of the information in this document
+
+We also let the browser know that the language (`lang`) of the information in this document
 is English. 
 --
 Why might we do that?
@@ -196,3 +208,143 @@ It's further information that's helpful to browsers.
 
 The `<body>`, by contrast, is where we keep everything we want users to see.
 
+---
+
+template: template
+layout: true
+name: anatomy
+
+## Anatomy of HTML
+
+---
+
+HTML is made up of tags.
+
+Tags tell the browser how to encode the content.
+
+There's lots of different types of content, such as
+
+- headings
+- images
+- links
+- paragraphs
+- images
+- videos
+
+---
+
+class: grid-4
+
+.heading[
+Regular Tags
+]
+
+.grid-column-span-3[
+```html
+<p>Hello GA</p>
+```
+
+We have an _opening tag_, a _closing tag_, and in the middle, we have _content_.
+
+In this case, our _content_ is just plain text, as it will be shown to the user.
+]
+
+.heading[
+Self-closing Tags
+]
+
+.grid-column-span-3[
+```html
+<img src="picture.jpg" alt="A lovely picture" />
+```
+
+We have a _self-closing tag_, and the content isn't text, but instead it's an image.
+
+In this case, the image data are fetched by the browser by loading the resource at the location specified in the _src_ attribute.
+]
+
+---
+
+### Attributes
+
+```html
+<img src="picture.jpg" alt="A lovely picture" />
+```
+
+Our friendly `<img />` tag has two attributes,
+defining the source (`src`) and the text alternative (`alt`).
+Both of these are interpreted by the browser.
+
+Attributes always exist on the **opening tag** of an element, never the closing tag. If we have a self-closing tag then there's only one tag where it can appear: it's still the opening one!
+
+They have two parts to them, a **name** and a **value**.
+We separate them by a single equals sign,
+which when we're coding is usually _the assignment operator_.
+We're telling the browser that the **name** attribute has the value of **value**.
+We're _assigning_ the value to that name.
+
+---
+
+### Attributes
+
+```html
+<a href="https://nytimes.com">New York Times</a>
+```
+
+Here, we're creating a link, otherwise known as an _anchor_.
+--
+
+
+So the browser knows where to take the user,
+we provide an `href`, a _hyperlink reference_,
+by declaring that `href="https://nytimes.com/"`.
+
+---
+
+class: grid-4
+
+.heading[
+attribute declaration
+]
+
+`src="picture.jpg"`
+
+`alt="A lovely picture"`
+
+`href="https://nytimes.com/"`
+
+.heading[
+name
+]
+
+`src`
+
+`alt`
+
+`href`
+
+.heading[
+value
+]
+
+`picture.jpg`
+
+`A lovely picture`
+
+`https://nytimes.com`
+--
+
+
+.grid-column-span-4[
+What a web browser does with the attributes we provide
+is determined by two things: the HTML specification,
+and some additional browser behaviour.
+]
+--
+
+
+.grid-column-span-4[
+For instance, if we add an `href` attribute to an `<img>` tag,
+browsers won't do anything with this.
+Similarly, a `src` attribute on an `<a>` tag will be ignored.
+]

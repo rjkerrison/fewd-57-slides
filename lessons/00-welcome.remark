@@ -3,15 +3,16 @@ layout: presentation
 title: Welcome to FEWD 57
 ---
 
+class: title center middle
+
+# Introduction to FEWD 57
+
+---
+
 name: template
+layout: true
 
-.logo[
-  <picture>
-    <img alt="logo" src="{{ site.baseurl }}/assets/ga-logo-red-256x256.png" />
-  </picture>
-
-  # FEWD 57
-]
+{% include fewd-57-template.remark %}
 
 ---
 
@@ -39,8 +40,8 @@ with how smaller groups work better than individuals or large groups.
 
 This is…
 
-.center[
-  ### Front-End Web Development
+.center.weird.large[
+Front-End Web Development
 ]
 ---
 
@@ -52,14 +53,15 @@ layout: true
 
 class: grid-2
 
+.group[
 I'm Robin.
 I look like this.
+
 I'll be your instructor for the next 10 weeks.
+]
 
 .grid-column-2[
-  <picture>
-    <img alt="me in paris" src="{{ site.baseurl }}/assets/me-in-paris.jpg" />
-  </picture>
+  {% include asset-image.html alt="me in paris" image_file="me-in-paris.jpg" %}
 ]
 
 --
@@ -75,7 +77,7 @@ A bit of background:
 - Someone's been paying me to code since I was 20
 --
 
-- Currently a Software Engineer at Red Badger
+- Currently a Senior Software Engineer at Red Badger
 --
 
 - I've been with General Assembly since July 2020
@@ -119,6 +121,9 @@ layout: true
 Throughout this course, you will be
 
 - frustrated
+- surprised
+- amused
+- bemused
 - confused
 - satisfied
 
@@ -135,6 +140,20 @@ Learning is always an emotional experience.
 > .attribute[
 &ndash; a statistics professor whose name I've forgotten
 ]
+--
+
+
+.flex-row[
+  <picture>
+    {% include svg/mdn.svg %}
+  </picture>
+
+  <picture>
+    {% include svg/stack-overflow.svg %}
+  </picture>
+
+  {% include asset-image.html alt="Each other" image_file="classmates-376x230.png" %}
+]
 
 ---
 
@@ -142,6 +161,28 @@ template: template
 layout: true
 
 ## Expectations
+
+---
+
+class: grid-2
+
+.group[
+### The GA Student Experience
+
+- Open and friendly learning environment
+- Supportive, collaborative
+- Friendly yet challenging
+- Learn by doing - and making mistakes!
+- Be curious - ask lots of questions
+- Remember: no question is a stupid question
+
+
+- We'll focus on practical skills
+- We'll teach you how to continue learning
+]
+
+
+{% include asset-image.html alt="GA Logo" image_file="ga-logo-red-900x900.png" %}
 
 ---
 
@@ -164,6 +205,54 @@ There are four reasons students don't ask questions:
 
 You expect me and Ana to…
 
+???
+
+At this point, we'll have a Slack post where people can reply.
+
+---
+
+### Learn by doing
+
+We'll work through exercises in class and as homework
+to learn and practice the knowledge and techniques
+of front-end web development.
+
+Our goal is to work towards creating your **final project**,
+a website that you choose to make.
+In our final session, you'll present them to your classmates.
+
+---
+
+### Method Over Memory
+
+Famously learnt once and never forgotten
+
+- riding a bike
+- tying shoelaces
+- using chopsticks
+
+Learnt painfully in preparation of an exam and immediately forgotten
+
+- quadratic formula
+- chemical formulae
+- big old Shakespeare quotes
+
+The difference is **method**.
+
+---
+
+### Teaching a process
+
+This course is very practical but aims to teach you a **process** so you can replicate the material in your own projects.
+
+You **don't need to remember everything** we cover in detail.
+You just need to remember the gist of it so you **look things up** online and in your notes.
+
+> "Never remember what you can look up in books."
+>
+> .attribute[&ndash; Albert Einstein, possibly]
+
+
 ---
 
 template: template
@@ -181,10 +270,125 @@ Today
 
 Also today
 
-- basics of **H**yper**T**ext **M**arkup **L**anguage
+- basics of .acronym-initial[H]yper.acronym-initial[T]ext .acronym-initial[M]arkup .acronym-initial[L]anguage
 - exercises
 
 Next Lesson
 
-- basics of **C**ascading **S**tyle **S**heets
+- basics of .acronym-initial[C]ascading .acronym-initial[S]tyle .acronym-initial[S]heets
 - exercises
+
+---
+
+class: grid-3
+
+.group[
+### Weeks 2 to 4
+
+Display
+
+- HTML and CSS
+- Layouts
+- Responsive design
+- Positioning
+]
+
+.group[
+### Weeks 5 to 7
+
+Functionality
+
+- Introduction to Programming
+- JavaScript basics
+- Arrays and loops
+- Conditional statements
+- Animations
+]
+
+.group[
+### Weeks 8 to 10
+
+The Wider World
+
+- External data
+  - Forms
+  - APIs
+- External code
+  - Plugins
+  - Libraries
+- Your final project
+  - a website you choose to make
+  - show off your new skills
+]
+
+---
+
+template: template
+layout: true
+
+## Installation and Setup
+---
+
+For us to succeed, there's some things else we need
+
+- A way to communicate
+  - [Slack][slack], where we'll communicate in [our #fewd57_5oct channel][our-slack]
+- A good web browser
+  - [Firefox Developer Edition][firefox] is the superior browser for developers
+  - [Chrome][chrome] is okay
+- A good text editor
+  - [VSCode][vscode] is superior
+  - SublimeText is okay
+  - Atom is okay (but I've never used it)
+- Some VSCode extensions
+  - [Live Server][liveserver]
+  - [Prettier][prettier]
+  - [Color Highlight][color-highlight]
+  - [Bracket Pair Colorizer 2][bracket-pair-colorizer]
+
+---
+
+And a few more…
+
+- [GitHub Desktop][github-desktop]
+- Please create an account at [github.com](https://github.com)
+- Please create an account at [codepen.io](https://codepen.io)
+
+We'll use these to share coding exercises and you'll use them to submit homework
+or other exercises for feedback.
+
+Please share your GitHub username with Robin and Ana, so we can invite you to the exercise repositories.
+
+---
+
+Once we're all set up, we'll be able to go to
+[our shared code repository][rjkerrison/fewd-57-exercises],
+and follow the instructions to _clone_ that code locally using GitHub Desktop.
+
+We'll be able to run a website locally using the [Live Server][liveserver] extension locally.
+
+Let's start with the one in the _hello-world_ folder.
+
+---
+
+template: template
+
+## Lesson 1
+
+Let's get started with [our first lesson][lesson-1].
+
+
+[slack]: https://slack.com/downloads "Slack Desktop"
+[our-slack]: https://ga-ldn-fwd.slack.com/archives/C01BDKBF6M9 "GA London Front-End Web Development Slack"
+[firefox]: https://www.mozilla.org/en-US/firefox/developer/ "Firefox Developer Edition"
+[chrome]: https://www.google.co.uk/chrome/ "Chrome"
+[vscode]: https://code.visualstudio.com/ "VSCode"
+[github-desktop]: https://desktop.github.com/ "GitHub Desktop"
+
+[color-highlight]: https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight "Color Highlight on VSCode Extensions"
+[bracket-pair-colorizer]: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2 "Bracket Pair Colorizer 2 on VSCode Extensions"
+[liveserver]: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer "LiveServer on VSCode Extensions"
+[prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode "Prettier on VSCode Extensions"
+
+[rjkerrison/fewd-57-exercises]: https://github.com/rjkerrison/fewd-57-exercises "FEWD 57 Exercises on GitHub"
+[lesson-1]: {{site.baseurl}}/lessons/01-html.html "Lesson One: HTML"
