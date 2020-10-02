@@ -90,6 +90,31 @@ A bit of background:
 ---
 
 I'm Ana…
+I look something like this but with curls atm!
+I'll be your TA for the next 10 weeks.
+]
+
+.grid-column-2[
+  {% include asset-image.html alt="ana in new forest" image_file="ana-new-forest.jpg" %}
+]
+
+--
+
+A bit of background:
+
+- I started coding with this GA course back in February.
+--
+
+- Currently learning React and looking for Junior FEWD opportunities.
+--
+
+- Atm I work for London Art Fair as Fair Manager. 
+--
+
+- I also became obsessed with Animal Crossing during lockdown!
+--
+
+
 
 ---
 
