@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+@import './weird.css';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato';
+}
+h1,
+h2,
+h3 {
+  font-family: 'Oxygen';
+  font-weight: normal;
+}
+.remark-code,
+.remark-inline-code {
+  font-family: 'Ubuntu Mono';
+}
+
+blockquote {
+  font-style: italic;
+  background-color: rgb(242, 233, 162);
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+}
+blockquote .attribute {
+  text-align: right;
+  width: 50%;
+  position: relative;
+  right: -45%;
+}
+.title {
+  background: rgb(215, 0, 0);
+  color: white;
+}
+.title h1 {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.25rem;
+  font-family: 'Proxima Nova', 'Oxygen';
+  font-weight: 700;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.header::after {
+  content: 'GA';
+  display: block;
+}
+h2 {
+  text-align: center;
+}
+
+input[type='text'] {
+  font-size: inherit;
+  font-family: inherit;
+  border-width: 0 0 0.125rem 0;
+}
+input[type='text']:focus {
+  outline: none;
+  border-bottom: rgb(218, 1, 1) 0.25rem solid;
+}
+.remark-code-line-highlighted {
+  background-color: rgba(200, 241, 185, 0.5);
+}
+.logo {
+  position: absolute;
+  left: 1rem;
+  bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.logo p {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+}
+.logo picture {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+picture > img {
+  max-width: 100%;
+  height: auto;
+}
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  width: 100%;
+  padding-bottom: 100%;
+  gap: 1rem;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-column-2 {
+  grid-column: 2;
+}
+.grid-column-span-2 {
+  grid-column-end: span 2;
+}
+.grid-column-span-3 {
+  grid-column-end: span 3;
+}
+.grid-column-span-4 {
+  grid-column-end: span 4;
+}
+.heading {
+  background-color: rgba(0, 81, 96, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+}
+code {
+  background-color: rgb(249, 255, 185);
+  color: rgb(4, 69, 80);
+}
+h2 {
+  grid-column: 1 / -1;
+}
+.acronym-initial {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.flex-row {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.flex-row > * {
+  flex: 1;
+  text-align: center;
+}

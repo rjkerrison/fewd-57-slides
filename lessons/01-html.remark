@@ -348,3 +348,17 @@ For instance, if we add an `href` attribute to an `<img>` tag,
 browsers won't do anything with this.
 Similarly, a `src` attribute on an `<a>` tag will be ignored.
 ]
+
+---
+
+## How to be a spy
+
+As developers,
+we don't need a trench coat and a magnifying glass to
+inspect other websites.
+
+We can use the **element inspector**.
+
+Pick your favourite website, and identify three tags on it.
+
+This is really useful, as a way to understand how other websites work.

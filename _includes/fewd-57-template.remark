@@ -1,0 +1,7 @@
+.logo[
+<picture>
+  <img alt="logo" src="{{ site.baseurl }}/assets/ga-logo-red-256x256.png" />
+</picture>
+
+FEWD 57
+]
