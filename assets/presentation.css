@@ -159,20 +159,20 @@ h2 {
   flex: 1;
   text-align: center;
 }
-.task {
+.exercise {
   position: relative;
   padding: 1rem;
   background-color: rgb(252, 224, 12);
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(9, 15, 16, 0.5);
   margin-top: 2rem;
 }
-.task::before,
-.task.guided::after {
-  content: 'Task!';
+.exercise::before,
+.exercise.guided::after {
+  content: 'Exercise!';
   left: 0.5rem;
 }
-.task::before,
-.task.guided::after {
+.exercise::before,
+.exercise.guided::after {
   border-radius: 0.5rem;
   border: 0.125rem solid black;
   background-color: white;
@@ -184,11 +184,11 @@ h2 {
   font-weight: 700;
   box-shadow: 0 0 0.0625rem rgba(9, 15, 16, 0.8);
 }
-.task.guided,
-.task.guided::after {
+.exercise.guided,
+.exercise.guided::after {
   background-color: rgb(114, 202, 236);
 }
-.task.guided::after {
+.exercise.guided::after {
   content: 'Guided';
-  left: 4rem;
+  left: 5.5rem;
 }

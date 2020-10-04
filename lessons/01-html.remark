@@ -371,7 +371,7 @@ We can use the **element inspector**.
 
 ---
 
-.task[
+.exercise[
 Pick your favourite website, and identify three tags on it.
 ]
 
@@ -431,7 +431,7 @@ HTML document, we talk about **parents**, **children**, and **siblings**.
 
 ---
 
-.task[
+.exercise[
 Identify a parent-child relationship and
 a sibling-sibling relationship in the HTML below.
 ]
@@ -628,7 +628,7 @@ layout: true
 
 ---
 
-.task.guided[
+.exercise.guided[
 Let's make a press release together!
 ]
 
@@ -642,7 +642,7 @@ Alternatively, see [@pataruco][pataruco]'s CodePen versions:
 
 ---
 
-.task[
+.exercise[
 Write up a cookie recipe as a webpage.
 ]
 
@@ -656,7 +656,7 @@ Alternatively, see [@pataruco][pataruco]'s CodePen versions:
 
 ---
 
-.task[
+.exercise[
 Create a band page for Kässerole.
 ]
 
