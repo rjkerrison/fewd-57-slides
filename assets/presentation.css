@@ -91,6 +91,9 @@ picture > img {
   max-width: 100%;
   height: auto;
 }
+.grid-no-margins > * {
+  margin: 0;
+}
 .grid-2,
 .grid-3,
 .grid-4 {
@@ -122,6 +125,9 @@ picture > img {
 }
 .grid-column-span-4 {
   grid-column-end: span 4;
+}
+.grid-row-span-2 {
+  grid-row-end: span 2;
 }
 .heading {
   background-color: rgba(0, 81, 96, 1);
@@ -155,4 +161,37 @@ h2 {
 .flex-row > * {
   flex: 1;
   text-align: center;
+}
+.exercise {
+  position: relative;
+  padding: 1rem;
+  background-color: rgb(252, 224, 12);
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(9, 15, 16, 0.5);
+  margin-top: 2rem;
+}
+.exercise::before,
+.exercise.guided::after {
+  content: 'Exercise!';
+  left: 0.5rem;
+}
+.exercise::before,
+.exercise.guided::after {
+  border-radius: 0.5rem;
+  border: 0.125rem solid black;
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  top: -0.5rem;
+  font-size: 0.75rem;
+  font-family: 'Oxygen';
+  font-weight: 700;
+  box-shadow: 0 0 0.0625rem rgba(9, 15, 16, 0.8);
+}
+.exercise.guided,
+.exercise.guided::after {
+  background-color: rgb(114, 202, 236);
+}
+.exercise.guided::after {
+  content: 'Guided';
+  left: 5.5rem;
 }

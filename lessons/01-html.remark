@@ -351,7 +351,12 @@ Similarly, a `src` attribute on an `<a>` tag will be ignored.
 
 ---
 
+template: template
+layout: true
+
 ## How to be a spy
+
+---
 
 As developers,
 we don't need a trench coat and a magnifying glass to
@@ -359,6 +364,341 @@ inspect other websites.
 
 We can use the **element inspector**.
 
+{% include asset-image.html
+  alt="Preview of a right-click to inspect the element."
+  image_file="01-html/element-inspector-right-click.png"
+%}
+
+---
+
+.exercise[
 Pick your favourite website, and identify three tags on it.
+]
 
 This is really useful, as a way to understand how other websites work.
+
+You can look at how another website has used HTML and CSS using the inspector,
+and it can help you to check or modify your own websites.
+
+To view the HTML structure of your chosen page, right click on any element and choose **Inspect Element**. This will open the element inspector part of the developer tools in Firefox or Chrome. 
+
+From here, you can view and edit the HTML structure underlying the page.
+
+Use resources such as [**MDN** (Mozilla Developer Network)][mdn]
+to get a sense of what the tag means and its most common use cases.
+
+---
+
+template: template
+layout: true
+
+## Structure of HTML
+
+---
+
+HTML provides the structure and the content of the webpage.
+
+How should we think about the structure of HTML?
+
+--
+
+### Like a tree!
+
+Our `<html>` tag is the very root of the tree.
+It branches off into two smaller sections: `<head>` and `<body>`.
+
+Inside `<head>` we might have a few `<meta>` and `<link>` leaves,
+as well as the `<title>` leaf.
+
+Inside `<body>`, things can get very complicated.
+We can have simple `<h1>` leaves, or `<p>` branches with `<a>` leaves inside them.
+
+---
+
+class: grid-2
+
+.group[
+### A _family_ tree
+
+Instead of talking about _leaves_ and _branches_ when referring to an
+HTML document, we talk about **parents**, **children**, and **siblings**.
+]
+--
+
+<picture>
+{% include svg/sibling-diagram.svg %}
+</picture>
+
+---
+
+.exercise[
+Identify a parent-child relationship and
+a sibling-sibling relationship in the HTML below.
+]
+
+```html
+<body>
+  <h1>I Am A Tree</h1>
+  <main>
+    <p>
+      I woke up one day to discover I was a tree.
+      I checked myself for all the indicators of being a tree.
+    </p>
+    <ul>
+      <li>Leaves</li>
+      <li>Branches</li>
+      <li>Trunk</li>
+      <li>Roots</li>
+      <li>Squirrels</li>
+      <li>Nuts</li>
+    </ul>
+  </main>
+</body>
+```
+
+---
+
+template: template
+layout: true
+class: grid-3 grid-no-margins
+
+## Common `<body>` Tags
+
+.heading[
+  Element
+]
+
+.heading[
+  Description
+]
+
+.heading[
+  Example
+]
+
+---
+
+### h1
+
+Main headings
+
+```html
+<h1>The Explorer</h1>
+```
+
+### h2-h6
+
+Subheadings
+
+```html
+<h2>Articles</h2>
+```
+
+### p
+
+Paragraph of text
+
+```html
+<p>When I was a young boy living in Hampshire…</p>
+```
+
+### a
+
+Anchor tag for links
+
+```html
+<a href="https://ga.co/">General Assembly</a>
+```
+
+### img
+
+Images
+
+```html
+<img src="my-profile-pic.jpg" />
+```
+
+---
+
+### li
+
+List item
+
+.grid-row-span-2[
+```html
+<ul>
+  <li>Tomato soup, 10 tins of</li>
+  <li>Mushroom soup, 8 tins of for consumption cold</li>
+  <li>Ice cream, vanilla, one large tub of</li>
+  <li>Magnesia, milk of, one bottle</li>
+</ul>
+```
+]
+
+### ul
+
+Unordered list
+
+### ol
+
+Ordered list
+
+```html
+<ol>
+  <li>Demand satisfaction</li>
+  <li>Grab a friend</li>
+  <li>Negotiate a time or place</li>
+  <li>Get a doctor on site</li>
+</ol>
+```
+
+---
+
+template: template
+layout: true
+class: grid-3 grid-no-margins
+
+## Common `<head>` Tags
+
+.heading[
+  Element
+]
+
+.heading[
+  Description
+]
+
+.heading[
+  Example
+]
+
+---
+
+### link
+
+Link a style sheet (CSS) to your HTML.
+
+```html
+<link href="css/style.css" />
+```
+
+### title
+
+Website title that shows on the browser tab
+
+```html
+<title>NewsBadger | UK News from a Badger</title>
+```
+
+### meta
+
+Adds extra information helpful to browsers and machines
+
+```html
+<meta charset="utf-8" />
+<meta property="og:title" content="Example">
+<meta property="twitter:url" content="https://www.example.com/">
+<meta property="twitter:title" content="Example">
+```
+
+---
+
+template: template
+layout: false
+
+## Elements
+
+When we use a **tag**, we create an **element** in our HTML document.
+For elements inside the `<body>` element, this means they'll be elements visible on the page.
+
+Although we sometimes use the terms **tag** and **element** interchangeably,
+**tag** really only means the `<thing>` in angle brackets,
+whether it's an _opening_, _closing_ or _self-closing_ tag.
+
+**Element** refers to a specific part of the HTML, like a specific
+`<p>` paragraph element on the page,
+or even the whole `<body>` or `<head>` element.
+
+---
+
+template: template
+layout: true
+
+## Exercises!
+
+---
+
+.exercise.guided[
+Let's make a press release together!
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/press-release_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/yLYLmZb)
+- [Solution code](https://codepen.io/pataruco/pen/JjYjgza)
+
+---
+
+.exercise[
+Write up a cookie recipe as a webpage.
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/cookie-time_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/ExVxqBR)
+- [Solution code](https://codepen.io/pataruco/pen/BaoyBBj)
+
+---
+
+.exercise[
+Create a band page for Kässerole.
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/kasserole_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/RwWwXOz)
+- [Solution code](https://codepen.io/pataruco/pen/yLYLmWX)
+
+---
+
+template: template
+layout: false
+
+## Key Takeaways
+
+- HTML is **content**
+- **tags** define and describe the content on a webpage
+- elements are **related** to each other
+  - as **parent-child** relationships
+  - or as **sibling** relationships
+
+---
+
+template: template
+layout: false
+
+## Next Time, on FEWD
+
+- Style!
+- **CSS** will add styling to our HTML elements
+- **CSS** rules use selectors to select which HTML elements to style
+
+---
+
+layout: false
+class: title center middle
+
+# See you next time!
+
+[pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
+[exercises]: https://github.com/rjkerrison/fewd-57-exercises "rjkerrison/fewd-57-exercises on GitHub"
+[mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
