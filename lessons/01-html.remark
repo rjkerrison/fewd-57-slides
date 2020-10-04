@@ -692,6 +692,8 @@ layout: false
 - **CSS** will add styling to our HTML elements
 - **CSS** rules use selectors to select which HTML elements to style
 
+That'll be [our second lesson][lesson-2].
+
 ---
 
 layout: false
@@ -702,3 +704,5 @@ class: title center middle
 [pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
 [exercises]: https://github.com/rjkerrison/fewd-57-exercises "rjkerrison/fewd-57-exercises on GitHub"
 [mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
+
+[lesson-2]: {{site.baseurl}}/lessons/02-css.html "Lesson Two: CSS"

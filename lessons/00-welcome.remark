@@ -360,6 +360,10 @@ layout: true
 ## Installation and Setup
 ---
 
+.exercise[
+Install everything here!
+]
+
 For us to succeed, there's some things else we need
 
 - A way to communicate
@@ -379,6 +383,10 @@ For us to succeed, there's some things else we need
 
 ---
 
+.exercise[
+Install GitHub Desktop and setup your GitHub and CodePen accounts.
+]
+
 And a few more…
 
 - [GitHub Desktop][github-desktop]
@@ -392,6 +400,10 @@ Please share your GitHub username with Robin and Ana, so we can invite you to th
 
 ---
 
+.exercise[
+Let's clone the exercises.
+]
+
 Once we're all set up, we'll be able to go to
 [our shared code repository][rjkerrison/fewd-57-exercises],
 and follow the instructions to _clone_ that code locally using GitHub Desktop.
@@ -399,6 +411,17 @@ and follow the instructions to _clone_ that code locally using GitHub Desktop.
 We'll be able to run a website locally using the [Live Server][liveserver] extension locally.
 
 Let's start with the one in the _hello-world_ folder.
+
+???
+
+We'll need a volunteer to demonstrate.
+
+---
+
+We'll be using [our shared code repository][rjkerrison/fewd-57-exercises]
+to submit homeworks and other exercises for feedback.
+
+Ana and I are here to assist if you have any problems using GitHub.
 
 ---
 

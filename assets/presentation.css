@@ -129,6 +129,11 @@ picture > img {
 .grid-row-span-2 {
   grid-row-end: span 2;
 }
+.grid-2-wide {
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
 .heading {
   background-color: rgba(0, 81, 96, 1);
   color: white;

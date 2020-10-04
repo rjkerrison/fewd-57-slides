@@ -1,198 +1,129 @@
 ---
 layout: presentation
-title: HTML
+title: Semantic HTML and CSS
 ---
 
 class: title center middle
 
-# Welcome to FEWD 57
+# Semantic HTML and CSS
 
 ---
 
 layout: true
 name: template
 
-.header[
-# FEWD 57
+{% include fewd-57-template.remark %}
+
+---
+
+template: template
+layout: false
+
+## Previously, on FEWD
+
+- HTML is an acronym for what?
+- What is HTML?
+- How would you recognise HTML?
+- What are the two parts of an HTML attribute?
+- What are the 3 tags on every web page?
+- How is HTML organised?
+
+All of this was covered in [lesson one][lesson-1].
+
+---
+
+template: template
+layout: false
+
+## Today's Learning Objectives
+
+- Choose semantic HTML tags to define and organise content
+- Use CSS to apply style to web pages
+- Learn the basics of CSS syntax
+  - selectors!
+  - style rules!
+
+---
+
+template: template
+layout: true
+class: grid-2 grid-no-margins grid-2-wide
+
+## Semantic Elements
+
+.heading[
+  Element
+]
+
+.heading[
+  Description
 ]
 
 ---
 
-## Lesson 1
+### main
 
-Our Learning Goals:
+Indicates the main content of a page.
 
-- Choose semantic HTML tags to define and organise content.
-- Use CSS to apply style to web pages.
-- Learn the basics of CSS syntax, including selectors and style rules.
+### header
+
+Content placed above the main content which contextualises that content.
+
+### nav
+
+A navigation section.
+
+### section
+
+Typically indicates one of several, equally placed segments of content.
+
+### aside
+
+Supplementary content, typically placed next to the `<main>` or `<section>` element it supplements.
+
+### div
+
+A generic, **non-semantic** division.
 
 ---
 
 template: template
 layout: true
 
-## HyperText Markup Language
----
-
-**H**yper**T**ext **M**arkup **L**anguage is the language with which we create documents.
---
-
-
-We're lazy, so we call it **HTML**.
---
-
-
-It's called **hypertext** because it is **better than regular old text**.
---
-
-
-It's closely related to **HTTP** and **HTTPS**,
-or **H**yper**T**ext **T**ransfer **P**rotocol (**S**ecure)
---
-
-
-**Hypertext** is **better than regular old text** because it allows us to add…
---
-
-- links!
---
-
-- structure
---
-
-- meta information
---
-
-- styling (using CSS)
---
-
-- functionality (using JS)
----
-
-template: template
-layout: true
-name: example
-
-## An example
----
-
-Enough chat! Let's see what the fuss is about.
---
-
-```html
-{% include basic-example.html %}
-```
-
---
-
-This would look an awful lot like [this webpage]({{site.baseurl}}/example).
+## CSS Basics
 
 ---
 
-template: example
-layout: true
+{% include asset-image.html alt="A chair" image_file="02-css/chair.jpg" %}
 
-Let's take a deeper look.
----
+???
 
-```html
-*<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A friendly hello example page</title>
-  </head>
-  <body>
-    <p>Hello, FEWD 57!</p>
-  </body>
-</html>
-```
+CSS is what makes sites look the way they do.
 
---
-
-
-This is the **doctype** declaration.
-It tells the web browser what **type of document** (hence the name) this file is.
---
-
-
-In our cases, it will always be `<!DOCTYPE html>`.
+HTML could say "boat" but the CSS determines the style of the boat.
+Similarly, "chair."
 
 ---
 
-```html
-<!DOCTYPE html>
-*<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A friendly hello example page</title>
-  </head>
-  <body>
-    <p>Hello, FEWD 57!</p>
-  </body>
-*</html>
-```
+.exercise.guided[
+Let's look at our handy example.
+]
 
---
+There's a handy example in [our shared code repository][rjkerrison/fewd-57-exercises],
+which covers many of the common CSS selectors and properties.
 
-Now that we've told the browser we have an `html` document type,
-we indicate where all the `html` is: inside the `<html>` tag.
---
+Keep referring back to this example as we learn CSS basics.
 
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
 
-We also let the browser know that the language (**lang**) of the information in this document
-is English. 
---
-Why might we do that?
---
-
-
-Yes, well done <input type="text" placeholder="Name" name="name" />!
-Check out _[une petite exemple]({{ site.baseurl }}/exemple)_.
+- [Starter code](https://codepen.io/pataruco/pen/yLYLmZb)
+- [Solution code](https://codepen.io/pataruco/pen/JjYjgza)
 
 ---
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-* <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A friendly hello example page</title>
-* </head>
-  <body>
-    <p>Hello, FEWD 57!</p>
-  </body>
-</html>
-```
-
---
 
 
-The `<head>` is where we have information that isn't part of the displayed document.
 
-It's further information that's helpful to browsers.
+[rjkerrison/fewd-57-exercises]: https://github.com/rjkerrison/fewd-57-exercises "FEWD 57 Exercises on GitHub"
 
----
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A friendly hello example page</title>
-  </head>
-* <body>
-    <p>Hello, FEWD 57!</p>
-* </body>
-</html>
-```
-
---
-
-
-The `<body>`, by contrast, is where we keep everything we want users to see.
-
+[lesson-1]: {{site.baseurl}}/lessons/01-html.html "Lesson One: HTML"
