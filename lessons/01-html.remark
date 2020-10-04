@@ -608,13 +608,14 @@ layout: false
 
 ## Elements
 
-When we use a **tag**, we create an **element**.
+When we use a **tag**, we create an **element** in our HTML document.
+For elements inside the `<body>` element, this means they'll be elements visible on the page.
 
-Although we sometimes use these terms interchangeably,
+Although we sometimes use the terms **tag** and **element** interchangeably,
 **tag** really only means the `<thing>` in angle brackets,
 whether it's an _opening_, _closing_ or _self-closing_ tag.
 
-_Element_ refers to a specific part of the HTML, like a specific
+**Element** refers to a specific part of the HTML, like a specific
 `<p>` paragraph element on the page,
 or even the whole `<body>` or `<head>` element.
 
@@ -624,6 +625,20 @@ template: template
 layout: true
 
 ## Exercises!
+
+---
+
+.task.guided[
+Let's make a press release together!
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/press-release_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/yLYLmZb)
+- [Solution code](https://codepen.io/pataruco/pen/JjYjgza)
 
 ---
 

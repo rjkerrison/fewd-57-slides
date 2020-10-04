@@ -166,17 +166,29 @@ h2 {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(9, 15, 16, 0.5);
   margin-top: 2rem;
 }
-.task::before {
+.task::before,
+.task.guided::after {
   content: 'Task!';
+  left: 0.5rem;
+}
+.task::before,
+.task.guided::after {
   border-radius: 0.5rem;
   border: 0.125rem solid black;
   background-color: white;
   padding: 0.25rem 0.5rem;
   position: absolute;
   top: -0.5rem;
-  left: 0.5rem;
   font-size: 0.75rem;
   font-family: 'Oxygen';
   font-weight: 700;
   box-shadow: 0 0 0.0625rem rgba(9, 15, 16, 0.8);
+}
+.task.guided,
+.task.guided::after {
+  background-color: rgb(114, 202, 236);
+}
+.task.guided::after {
+  content: 'Guided';
+  left: 4rem;
 }
