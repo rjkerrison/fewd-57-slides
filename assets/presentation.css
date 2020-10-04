@@ -91,6 +91,9 @@ picture > img {
   max-width: 100%;
   height: auto;
 }
+.grid-no-margins > * {
+  margin: 0;
+}
 .grid-2,
 .grid-3,
 .grid-4 {
@@ -119,6 +122,9 @@ picture > img {
 }
 .grid-column-span-4 {
   grid-column-end: span 4;
+}
+.grid-row-span-2 {
+  grid-row-end: span 2;
 }
 .heading {
   background-color: rgba(0, 81, 96, 1);

@@ -458,6 +458,232 @@ a sibling-sibling relationship in the HTML below.
 
 ---
 
+template: template
+layout: true
+class: grid-3 grid-no-margins
 
+## Common `<body>` Tags
 
+.heading[
+  Element
+]
+
+.heading[
+  Description
+]
+
+.heading[
+  Example
+]
+
+---
+
+### h1
+
+Main headings
+
+```html
+<h1>The Explorer</h1>
+```
+
+### h2-h6
+
+Subheadings
+
+```html
+<h2>Articles</h2>
+```
+
+### p
+
+Paragraph of text
+
+```html
+<p>When I was a young boy living in Hampshire…</p>
+```
+
+### a
+
+Anchor tag for links
+
+```html
+<a href="https://ga.co/">General Assembly</a>
+```
+
+### img
+
+Images
+
+```html
+<img src="my-profile-pic.jpg" />
+```
+
+---
+
+### li
+
+List item
+
+.grid-row-span-2[
+```html
+<ul>
+  <li>Tomato soup, 10 tins of</li>
+  <li>Mushroom soup, 8 tins of for consumption cold</li>
+  <li>Ice cream, vanilla, one large tub of</li>
+  <li>Magnesia, milk of, one bottle</li>
+</ul>
+```
+]
+
+### ul
+
+Unordered list
+
+### ol
+
+Ordered list
+
+```html
+<ol>
+  <li>Demand satisfaction</li>
+  <li>Grab a friend</li>
+  <li>Negotiate a time or place</li>
+  <li>Get a doctor on site</li>
+</ol>
+```
+
+---
+
+template: template
+layout: true
+class: grid-3 grid-no-margins
+
+## Common `<head>` Tags
+
+.heading[
+  Element
+]
+
+.heading[
+  Description
+]
+
+.heading[
+  Example
+]
+
+---
+
+### link
+
+Link a style sheet (CSS) to your HTML.
+
+```html
+<link href="css/style.css" />
+```
+
+### title
+
+Website title that shows on the browser tab
+
+```html
+<title>NewsBadger | UK News from a Badger</title>
+```
+
+### meta
+
+Adds extra information helpful to browsers and machines
+
+```html
+<meta charset="utf-8" />
+<meta property="og:title" content="Example">
+<meta property="twitter:url" content="https://www.example.com/">
+<meta property="twitter:title" content="Example">
+```
+
+---
+
+template: template
+layout: false
+
+## Elements
+
+When we use a **tag**, we create an **element**.
+
+Although we sometimes use these terms interchangeably,
+**tag** really only means the `<thing>` in angle brackets,
+whether it's an _opening_, _closing_ or _self-closing_ tag.
+
+_Element_ refers to a specific part of the HTML, like a specific
+`<p>` paragraph element on the page,
+or even the whole `<body>` or `<head>` element.
+
+---
+
+template: template
+layout: true
+
+## Exercises!
+
+---
+
+.task[
+Write up a cookie recipe as a webpage.
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/cookie-time_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/ExVxqBR)
+- [Solution code](https://codepen.io/pataruco/pen/BaoyBBj)
+
+---
+
+.task[
+Create a band page for Kässerole.
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/kasserole_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/RwWwXOz)
+- [Solution code](https://codepen.io/pataruco/pen/yLYLmWX)
+
+---
+
+template: template
+layout: false
+
+## Key Takeaways
+
+- HTML is **content**
+- **tags** define and describe the content on a webpage
+- elements are **related** to each other
+  - as **parent-child** relationships
+  - or as **sibling** relationships
+
+---
+
+template: template
+layout: false
+
+## Next Time, on FEWD
+
+- Style!
+- **CSS** will add styling to our HTML elements
+- **CSS** rules use selectors to select which HTML elements to style
+
+---
+
+layout: false
+class: title center middle
+
+# See you next time!
+
+[pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
+[exercises]: https://github.com/rjkerrison/fewd-57-exercises "rjkerrison/fewd-57-exercises on GitHub"
 [mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
