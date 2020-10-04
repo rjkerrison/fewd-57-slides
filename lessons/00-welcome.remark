@@ -46,6 +46,89 @@ Front-End Web Development
 
 ---
 
+class: center middle section-title
+layout: false
+
+# Course Overview
+
+---
+
+template: template
+layout: true
+
+## Course overview
+
+---
+
+Today
+
+- introductions
+- expectations
+- course outline
+- time to install, setup our machines
+
+Also today
+
+- basics of .acronym-initial[H]yper.acronym-initial[T]ext .acronym-initial[M]arkup .acronym-initial[L]anguage
+- exercises
+
+Next Lesson
+
+- basics of .acronym-initial[C]ascading .acronym-initial[S]tyle .acronym-initial[S]heets
+- exercises
+
+---
+
+class: grid-3
+
+.group[
+### Weeks 2 to 4
+
+Display
+
+- HTML and CSS
+- Layouts
+- Responsive design
+- Positioning
+]
+
+.group[
+### Weeks 5 to 7
+
+Functionality
+
+- Introduction to Programming
+- JavaScript basics
+- Arrays and loops
+- Conditional statements
+- Animations
+]
+
+.group[
+### Weeks 8 to 10
+
+The Wider World
+
+- External data
+  - Forms
+  - APIs
+- External code
+  - Plugins
+  - Libraries
+- Your final project
+  - a website you choose to make
+  - show off your new skills
+]
+
+---
+
+class: center middle section-title
+layout: false
+
+# Introductions
+
+---
+
 template: template
 layout: true
 
@@ -116,9 +199,6 @@ A bit of background:
 --
 
 - I also became obsessed with Animal Crossing during lockdown!
---
-
-
 
 ---
 
@@ -143,10 +223,18 @@ Introduce yourself to the class, answering the _who_, the _why_, and the _where_
   and give us an anecdote from that year
 ---
 
+class: center middle section-title
+layout: false
+
+# Expectations
+
+---
+
 template: template
 layout: true
 
 ## Things to remember about learning
+
 ---
 
 Throughout this course, you will be
@@ -286,71 +374,10 @@ You just need to remember the gist of it so you **look things up** online and in
 
 ---
 
-template: template
-layout: true
+class: middle center section-title
+layout: false
 
-## Course overview
----
-
-Today
-
-- introductions
-- expectations
-- course outline
-- time to install, setup our machines
-
-Also today
-
-- basics of .acronym-initial[H]yper.acronym-initial[T]ext .acronym-initial[M]arkup .acronym-initial[L]anguage
-- exercises
-
-Next Lesson
-
-- basics of .acronym-initial[C]ascading .acronym-initial[S]tyle .acronym-initial[S]heets
-- exercises
-
----
-
-class: grid-3
-
-.group[
-### Weeks 2 to 4
-
-Display
-
-- HTML and CSS
-- Layouts
-- Responsive design
-- Positioning
-]
-
-.group[
-### Weeks 5 to 7
-
-Functionality
-
-- Introduction to Programming
-- JavaScript basics
-- Arrays and loops
-- Conditional statements
-- Animations
-]
-
-.group[
-### Weeks 8 to 10
-
-The Wider World
-
-- External data
-  - Forms
-  - APIs
-- External code
-  - Plugins
-  - Libraries
-- Your final project
-  - a website you choose to make
-  - show off your new skills
-]
+# Installation and Setup
 
 ---
 
@@ -358,6 +385,7 @@ template: template
 layout: true
 
 ## Installation and Setup
+
 ---
 
 .exercise[

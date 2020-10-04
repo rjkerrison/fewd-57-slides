@@ -34,14 +34,15 @@ blockquote .attribute {
 }
 .title {
   background: rgb(215, 0, 0);
-  color: white;
 }
+.section-title {
+  background: rgb(33, 126, 198);
+}
+.section-title h1,
 .title h1 {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  text-decoration-thickness: 0.25rem;
   font-family: 'Proxima Nova', 'Oxygen';
   font-weight: 700;
+  color: white;
 }
 .header {
   display: flex;
