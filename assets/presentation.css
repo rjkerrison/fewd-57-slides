@@ -34,14 +34,15 @@ blockquote .attribute {
 }
 .title {
   background: rgb(215, 0, 0);
-  color: white;
 }
+.section-title {
+  background: rgb(33, 126, 198);
+}
+.section-title h1,
 .title h1 {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  text-decoration-thickness: 0.25rem;
   font-family: 'Proxima Nova', 'Oxygen';
   font-weight: 700;
+  color: white;
 }
 .header {
   display: flex;
@@ -91,16 +92,33 @@ picture > img {
   max-width: 100%;
   height: auto;
 }
+.group.primary {
+  background-color: rgb(67, 131, 162);
+  color: white;
+}
 .grid-no-margins > * {
   margin: 0;
 }
 .grid-2,
 .grid-3,
-.grid-4 {
+.grid-4,
+.grid-5,
+.grid-5-flow-column {
   display: grid;
   width: 100%;
   padding-bottom: 100%;
   gap: 1rem;
+}
+.gapless {
+  gap: 0;
+  padding: 0;
+}
+.gapless > .group {
+  padding: 0 2rem 100%;
+}
+.grid-5-flow-column {
+  grid-auto-flow: column;
+  grid-template-rows: 1fr repeat(5, 1fr);
 }
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
@@ -110,6 +128,9 @@ picture > img {
 }
 .grid-4 {
   grid-template-columns: repeat(4, 1fr);
+}
+.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
 }
 .grid-column-2 {
   grid-column: 2;
@@ -129,6 +150,11 @@ picture > img {
 .grid-row-span-2 {
   grid-row-end: span 2;
 }
+.grid-2-wide {
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
 .heading {
   background-color: rgba(0, 81, 96, 1);
   color: white;

@@ -81,6 +81,13 @@ JS is all the appliances, all the functional parts you can change by interacting
 
 ---
 
+class: middle center section-title
+layout: false
+
+# A basic example webpage
+
+---
+
 template: template
 layout: true
 name: example
@@ -105,6 +112,7 @@ template: example
 layout: true
 
 Let's take a deeper look.
+
 ---
 
 ```html
@@ -152,11 +160,8 @@ In our cases, it will always be `<!DOCTYPE html>`.
 Now that we've told the browser we have an `html` document type,
 we indicate where all our HTML is: inside the `<html>` tag!
 
-
-
 We also let the browser know that the language (`lang`) of the information in this document
 is English. 
---
 Why might we do that?
 --
 
@@ -210,6 +215,13 @@ The `<body>`, by contrast, is where we keep everything we want users to see.
 
 ---
 
+class: middle center section-title
+layout: false
+
+# Anatomy of HTML
+
+---
+
 template: template
 layout: true
 name: anatomy
@@ -218,16 +230,15 @@ name: anatomy
 
 ---
 
-HTML is made up of tags.
+HTML is made up of tags and attributes.
 
 Tags tell the browser how to encode the content.
 
 There's lots of different types of content, such as
 
 - headings
-- images
-- links
 - paragraphs
+- links
 - images
 - videos
 
@@ -236,7 +247,8 @@ There's lots of different types of content, such as
 class: grid-4
 
 .heading[
-Regular Tags
+Opening Tags
+and Closing Tags
 ]
 
 .grid-column-span-3[
@@ -351,6 +363,13 @@ Similarly, a `src` attribute on an `<a>` tag will be ignored.
 
 ---
 
+class: middle center section-title
+layout: false
+
+# Element Inspector
+
+---
+
 template: template
 layout: true
 
@@ -380,12 +399,22 @@ This is really useful, as a way to understand how other websites work.
 You can look at how another website has used HTML and CSS using the inspector,
 and it can help you to check or modify your own websites.
 
-To view the HTML structure of your chosen page, right click on any element and choose **Inspect Element**. This will open the element inspector part of the developer tools in Firefox or Chrome. 
+To view the HTML structure of your chosen page,
+right click on any element and choose **Inspect Element** on Firefox
+or **Inspect** on Chrome.
+This will open the element inspector part of the developer tools. 
 
 From here, you can view and edit the HTML structure underlying the page.
 
 Use resources such as [**MDN** (Mozilla Developer Network)][mdn]
 to get a sense of what the tag means and its most common use cases.
+
+---
+
+class: middle center section-title
+layout: false
+
+# Structure of HTML
 
 ---
 
@@ -455,6 +484,13 @@ a sibling-sibling relationship in the HTML below.
   </main>
 </body>
 ```
+
+---
+
+class: middle center section-title
+layout: false
+
+# Common HTML Tags
 
 ---
 
@@ -621,6 +657,13 @@ or even the whole `<body>` or `<head>` element.
 
 ---
 
+class: middle center section-title
+layout: false
+
+# Exercises
+
+---
+
 template: template
 layout: true
 
@@ -692,6 +735,8 @@ layout: false
 - **CSS** will add styling to our HTML elements
 - **CSS** rules use selectors to select which HTML elements to style
 
+That'll be [our second lesson][lesson-2].
+
 ---
 
 layout: false
@@ -702,3 +747,5 @@ class: title center middle
 [pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
 [exercises]: https://github.com/rjkerrison/fewd-57-exercises "rjkerrison/fewd-57-exercises on GitHub"
 [mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
+
+[lesson-2]: {{site.baseurl}}/lessons/02-css.html "Lesson Two: CSS"
