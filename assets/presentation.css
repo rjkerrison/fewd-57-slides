@@ -92,16 +92,33 @@ picture > img {
   max-width: 100%;
   height: auto;
 }
+.group.primary {
+  background-color: rgb(67, 131, 162);
+  color: white;
+}
 .grid-no-margins > * {
   margin: 0;
 }
 .grid-2,
 .grid-3,
-.grid-4 {
+.grid-4,
+.grid-5,
+.grid-5-flow-column {
   display: grid;
   width: 100%;
   padding-bottom: 100%;
   gap: 1rem;
+}
+.gapless {
+  gap: 0;
+  padding: 0;
+}
+.gapless > .group {
+  padding: 0 2rem 100%;
+}
+.grid-5-flow-column {
+  grid-auto-flow: column;
+  grid-template-rows: 1fr repeat(5, 1fr);
 }
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
@@ -111,6 +128,9 @@ picture > img {
 }
 .grid-4 {
   grid-template-columns: repeat(4, 1fr);
+}
+.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
 }
 .grid-column-2 {
   grid-column: 2;
