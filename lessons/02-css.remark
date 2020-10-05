@@ -714,7 +714,270 @@ a.external {
 ```
 ]
 
+---
+
+layout: false
+class: middle center section-title
+
+# CSS Properties
+
+---
+
+template: template
+layout: true
+
+## CSS Properties
+
+---
+
+```css
+p {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  border: 1px solid black;
+}
+```
+
+**Properties** are the part of a CSS rule that control the style
+of the selected element.
+
+Most properties have a really sensible, human-readable names.
+Some can cause confusion. If in doubt, test it out,
+or check documentation at [MDN][mdn] or elsewhere.
+
+Remember the format
+
+.center.large[`
+  <property name>: <property value>;
+`]
+
+---
+
+.acronym-initial[D]on't .acronym-initial[R]epeat .acronym-initial[Y]ourself
+
+If you're making the same declarations multiple times,
+consider being smarter with your selectors.
+
+```css
+.message, .notification {
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.message {
+  color: black;
+  background-color: lightgrey;
+}
+
+.notification {
+  color: red;
+  background-color: yellow;
+}
+```
+
+???
+
+_Don't Repeat Yourself_ is a really common mantra
+amongst developers.
+Developers are lazy in a good way.
+Preventing yourself from having to repeat yourself
+makes your code neater, and more useful.
+
+By remembering **DRY**, you can get more done in less time.
+
+---
+
+layout: true
+template: template
+
+## The Wide Universe of CSS Properties
+
+---
+
+class: center
+
+.large[
+  No developer remembers everything.
+]
+
+<picture>
+  <img src="https://media.giphy.com/media/FY9chKp6rulXy/source.gif" alt="the wide universe">
+</picture>
+
+.large[
+  Just remember what planet you're on.
+]
+
+---
+
+class: grid-2 grid-2-wide grid-no-margins
+
+.heading[
+  Property Name
+]
+
+.heading[
+  Description
+]
+
+background, background-color
+
+The style behind an element, whether
+an image, colour, or a gradient.
+
+border
+
+Styles the edges around the element.
+
+color
+
+Sets the colour of the text.
+
+font
+
+Controls the font family, its size, style, and weight.
+
+height, width
+
+Sets how tall or how wide an element is. Can be in `px`, `%` of a parent,
+`em`s, and a few others.
+
+margin
+
+Creates external space, between the border of an element and nearby elements.
+
+padding
+
+Creates internal space, between the border of an element and its interior content.
+
+text-align
+
+Defines whether the text lines up against the left edge, centres around the middle, or lines up against the right edge of the bounding box.
+
+---
+
+There are many, many, many, many, many, many, many more CSS properties.
+
+You can always find the official documentation at [MDN][mdn].
+
+Another great way to learn is to **inspect your favourite websites**.
+Practice recreating them to explore how they achieve their styles.
+
+---
+
+layout: false
+class: middle center section-title
+
+# CSS Good Practice
+
+---
+
+template: template
+layout: true
+
+## CSS structure tips
+
+---
+
+- Put every `property: value;` pair on a new line
+- Organise properties logically
+  - keep text colour and font size styles together
+  - keep margin, padding, and border together
+- Organise selectors logically
+  - keep everything related to your header together
+  - keep everything related to your footer together
+  - keep special homepage styling together
+- Use whitespace and indentation to make your code more readable
+  - Formatting tools like Prettier help with this
+
+All these practices will make it much easier for you
+and your team of developers to understand
+your CSS and to make sensible changes.
+
+---
+
+template: template
+layout: true
+
+## Linking CSS to HTML
+
+---
+
+Remember the `<head>` part of the HTML document.
+
+```html
+<head>
+  <title>Robin's Blog</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+```
+
+We **link** our CSS to our HTML by using a `<link>` element.
+
+The `href` value must resolve to your file for this to work.
+In the case here, we're telling the browser to look inside the directory called `styles` for a file called `main.css`.
+
+---
+
+layout: false
+class: middle center section-title
+
+# Homework
+
+---
+
+template: template
+layout: false
+
+## Homework
+
+.exercise[
+  Homework!
+]
+
+---
+
+template: template
+layout: false
+class: grid-2 gapless
+
+.group.primary[
+## Key Takeaways
+
+.center.large[
+  CSS cascades though our webpage
+]
+
+- Style is defined by **properties** and **values**
+- Selectors can apply consistent styles across a whole webpage
+- Semantic HTML helps coordinate with CSS
+]
+
+.group[
+## Next Time, on FEWD
+
+.center.large[
+  The CSS Box Model
+]
+
+- The box model defines sizing and spacing of elements
+- We'll explore **margin**, **padding**, **height**, and **width**
+
+All to come in [our third lesson][lesson-3].
+]
+
+---
+
+layout: false
+class: title center middle
+
+# See you next time!
+
+[mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
 [pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
 [exercises]: https://github.com/rjkerrison/fewd-57-exercises "FEWD 57 Exercises on GitHub"
 
 [lesson-1]: {{site.baseurl}}/lessons/01-html.html "Lesson One: HTML"
+[lesson-3]: {{site.baseurl}}/lessons/02-box-model.html "Lesson Two: Box Model"
