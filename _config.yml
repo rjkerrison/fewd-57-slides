@@ -18,17 +18,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Jekyll Remark Slides Website
+title: FEWD 57 Slides
 description: >- # this means to ignore newlines until "baseurl:"
-  View the source code for this site on GitHub.
-  Fork it on GitHub to create your own slideshow collection.
+  Slides for the FEWD 57 classes.
+
+  Full of HTML, CSS, and JS wisdom!
 baseurl: '/fewd-57-slides' # the subpath of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: robinjames_
 github_username: rjkerrison
 
 # Build settings
+header_pages:
+  - lessons/index.md
 theme: minima
+minima:
+  skin: solarized-dark
 plugins:
   - jekyll-feed
 # Exclude from processing.
