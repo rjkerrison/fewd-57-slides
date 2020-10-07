@@ -1,0 +1,15 @@
+---
+layout: presentation
+title: The Box Model
+---
+
+template: template
+layout: false
+
+## Today's Learning Objectives
+
+- Link to files from HTML using relative paths
+- Apply _normalize_ CSS to avoid browser default styling interference
+- Use margins and padding to create spacing between elements
+- Set the `display` property of elements to create page layouts
+
