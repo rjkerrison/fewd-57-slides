@@ -85,6 +85,164 @@ Other pages
 <a href="https://google.com">Google</a>
 ```
 
+---
+
+template: template
+layout: true
+
+## Relative Paths
+
+---
+
+Relative paths are filepaths written in relation to the file making the reference.
+
+```html
+<link rel="stylesheet" href="css/style.css" />
+```
+
+Here, saying `css/style.css` means
+
+> "go into the `css` folder, and get the `style.css` file"
+
+---
+
+There are two important things to know:
+
+- `.` (single dot) refers to the **current folder**
+- `..` (double dot) refers to the **parent folder**
+
+So I can say `./css/style.css` to mean
+
+> "from the **current folder**, go into the `css` folder, and get the `style.css` file"
+
+Or `../images/daffodils.jpg` means
+
+> "go into my **parent folder**, then go into the `images` folder, and get the `daffodils.jpg` file"
+
+---
+
+template: template
+layout: true
+
+## Absolute Paths: HTTPS/HTTP
+
+---
+
+When referring to external resources,
+we use absolute paths.
+
+```html
+<a href="https://google.com/">Google</a>
+```
+
+They start with `https://` or `http://`.
+
+No matter which webpage a user is on,
+the above link will take them to https://google.com/.
+
+### HTTPS
+
+Use `https://` wherever possible.
+HTTPS is the **secure** version of HTTP.
+It protects users by encoding the information they send,
+and checks for server certificates that they're on the right website.
+
+---
+
+template: template
+layout: true
+
+## Absolute Paths: Starting with `/`
+
+---
+
+class: grid-2 grid-no-margins
+
+.grid-column-span-2[
+Starting a path with `/` takes us to the **root directory** of the current website.
+
+```html
+<a href="/index.html">Homepage</a>
+```
+]
+
+.group[
+In this example, we might be at
+
+- `mywebsite.com/about/index.html`
+- `mywebsite.com/pages/01-my-first-page.html`.
+- `mywebsite.com/index.html`
+
+The link above would take users to `mywebsite.com/index.html`.
+]
+
+.group[
+However, if the link above was found on the page at
+
+- `otherwebsite.com/blog/september/01.html`
+- `otherwebsite.com/about/our-staff/bob.html`
+- `otherwebsite.com/index.html`
+
+The link would take users to `otherwebsite.com/index.html`.
+]
+
+.grid-column-span-2[
+It's best to avoid using links starting with `/`, and use relative paths instead.
+]
+
+---
+
+template: template
+layout: false
+
+## Using Paths
+
+Using relative paths lets us organise our projects logically.
+
+Front-End Web Developers (like you!) will generally keep all
+files in folders with descriptive names, for example
+
+- images in an `images` folder
+- all CSS in a `styles` folder
+- all JavaScript in a `scripts` folder
+
+This may mean that, from our `styles/main.css` CSS file,
+we have to use relative paths to reference background images.
+
+```css
+article {
+  background-image: url(../images/stars.png);
+}
+```
+
+Depending on our site structure, we may have a webpage at
+`about/index.html`,
+which references our stylesheet like so:
+
+```html
+<link rel="stylesheet" href="../styles/main.css" />
+```
+
+Remember: the relative path is relative to the **file making the reference**.
+
+---
+
+template: template
+layout: false
+
+## Relative Path Sense Check
+
+.exercise[
+What do each of the following paths mean?
+]
+
+```html
+<link rel="stylesheet" href="styles/main.css" />
+<link rel="stylesheet" href="../styles/main.css" />
+<link rel="stylesheet" href="/styles/main.css" />
+<link rel="stylesheet" href="./styles/main.css" />
+```
+
 
 [pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
 [exercises]: https://github.com/rjkerrison/fewd-57-exercises "rjkerrison/fewd-57-exercises on GitHub"
