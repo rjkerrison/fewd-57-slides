@@ -3,19 +3,6 @@ layout: presentation
 title: Semantic HTML and CSS
 ---
 
-class: title center middle
-
-# Semantic HTML and CSS
-
----
-
-layout: true
-name: template
-
-{% include fewd-57-template.remark %}
-
----
-
 template: template
 layout: false
 
@@ -49,6 +36,22 @@ class: middle center section-title
 layout: false
 
 # Semantic HTML
+
+---
+
+template: template
+layout: false
+
+## Semantic HTML
+
+> "[Semantic HTML][wikipedia-semantic-html] is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users."
+>
+> .attribute[– Wikipedia, October 2020]
+
+We can build our webpages to **look** however we want.
+That's the purpose of CSS!
+
+_Semantic HTML_ means building webpages by using HTML to define **the meaning in our webpages**.
 
 ---
 
@@ -91,6 +94,24 @@ Supplementary content, typically placed next to the `<main>` or `<section>` elem
 ### div
 
 A generic, **non-semantic** division.
+
+---
+
+template: template
+layout: false
+
+## Semantic Elements
+
+.exercise[
+  Spot the difference!
+
+  Explore two versions of the same webpage: one with semantic HTML, and one with generic HTML.
+]
+
+View the two webpages in [the exercises repository][exercises]
+at _example/semantic_.
+
+Discuss in small groups the difference between the webpages.
 
 ---
 
@@ -982,6 +1003,8 @@ class: title center middle
 [mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
 [pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
 [exercises]: https://github.com/rjkerrison/fewd-57-exercises "FEWD 57 Exercises on GitHub"
+
+[wikipedia-semantic-html]: https://en.wikipedia.org/wiki/Semantic_HTML "Semantic HTML on Wikipedia"
 
 [lesson-1]: {{site.baseurl}}/lessons/01-html.html "Lesson One: HTML"
 [lesson-3]: {{site.baseurl}}/lessons/02-box-model.html "Lesson Two: Box Model"

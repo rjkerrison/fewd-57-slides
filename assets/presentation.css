@@ -30,7 +30,8 @@ blockquote .attribute {
   text-align: right;
   width: 50%;
   position: relative;
-  right: -45%;
+  right: -50%;
+  display: block;
 }
 .title {
   background: rgb(215, 0, 0);

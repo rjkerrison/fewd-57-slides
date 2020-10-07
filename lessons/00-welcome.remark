@@ -3,19 +3,6 @@ layout: presentation
 title: Welcome to FEWD 57
 ---
 
-class: title center middle
-
-# Introduction to FEWD 57
-
----
-
-name: template
-layout: true
-
-{% include fewd-57-template.remark %}
-
----
-
 template: template
 layout: true
 
