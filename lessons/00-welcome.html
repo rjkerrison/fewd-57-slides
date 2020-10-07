@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to FEWD 57</title>
+    <link rel="stylesheet" href="/fewd-57-slides/assets/presentation.css" />
+  </head>
+  <body>
+    <script
+      src="/fewd-57-slides/assets/remark.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      // eslint-disable
+      const sourceContent = `
+
+class: title center middle
+
+# Welcome to FEWD 57
+
+---
+
+name: template
+layout: true
+
+.logo[
+<picture>
+  <img alt="logo" src="/fewd-57-slides/assets/ga-logo-red-256x256.png" />
+</picture>
+
+FEWD 57
+]
+
+
+---
+template: template
+layout: true
+
+## Welcome
+---
+
+Welcome to the class!
+--
+
+
+If you're looking for Geography 101,
+that's down the hall to the left.
+We really ought to fix the campus maps.
+
+???
+
+Use this opportunity to talk about working remote.
+Explain about breakout rooms, and your experience
+with how smaller groups work better than individuals or large groups.
+--
+
+
+This is…
+
+.center.weird.large[
+Front-End Web Development
+]
+
+---
+
+class: center middle section-title
+layout: false
+
+# Course Overview
+
+---
+
+template: template
+layout: true
+
+## Course overview
+
+---
+
+Today
+
+- introductions
+- expectations
+- course outline
+- time to install, setup our machines
+
+Also today
+
+- basics of .acronym-initial[H]yper.acronym-initial[T]ext .acronym-initial[M]arkup .acronym-initial[L]anguage
+- exercises
+
+Next Lesson
+
+- basics of .acronym-initial[C]ascading .acronym-initial[S]tyle .acronym-initial[S]heets
+- exercises
+
+---
+
+class: grid-3
+
+.group[
+### Weeks 2 to 4
+
+Display
+
+- HTML and CSS
+- Layouts
+- Responsive design
+- Positioning
+]
+
+.group[
+### Weeks 5 to 7
+
+Functionality
+
+- Introduction to Programming
+- JavaScript basics
+- Arrays and loops
+- Conditional statements
+- Animations
+]
+
+.group[
+### Weeks 8 to 10
+
+The Wider World
+
+- External data
+  - Forms
+  - APIs
+- External code
+  - Plugins
+  - Libraries
+- Your final project
+  - a website you choose to make
+  - show off your new skills
+]
+
+---
+
+class: center middle section-title
+layout: false
+
+# Introductions
+
+---
+
+template: template
+layout: true
+
+## Introductions
+
+---
+
+class: grid-2
+
+.group[
+I'm Robin.
+I look like this.
+
+I'll be your instructor for the next 10 weeks.
+]
+
+.grid-column-2[
+  <picture>
+  <img
+    alt="me in paris"
+    src="/fewd-57-slides/assets/me-in-paris.jpg"
+  />
+</picture>
+
+]
+
+--
+
+A bit of background:
+
+- I've been coding since I was 12
+--
+
+- I've been teaching one-to-one and small groups since I was 15
+--
+
+- Someone's been paying me to code since I was 20
+--
+
+- Currently a Senior Software Engineer at Red Badger
+--
+
+- I've been with General Assembly since July 2020
+--
+
+  - recent!
+
+---
+
+class: grid-2
+
+.group[
+I'm Ana…
+I look something like this but with curls atm!
+
+I'll be your TA for the next 10 weeks.
+]
+
+.grid-column-2.grid-row-span-3[
+  <picture>
+  <img
+    alt="ana in new forest"
+    src="/fewd-57-slides/assets/ana-new-forest.jpg"
+  />
+</picture>
+
+]
+
+--
+
+A bit of background:
+
+- I started coding with this GA course back in February.
+--
+
+- Currently learning React and looking for Junior FEWD opportunities.
+--
+
+- Atm I work for London Art Fair as Fair Manager. 
+--
+
+- I also became obsessed with Animal Crossing during lockdown!
+
+---
+
+.center[
+### You
+]
+
+Introduce yourself to the class, answering the _who_, the _why_, and the _where_.
+
+--
+
+- Who are you?
+--
+
+- Why are you here today?
+--
+
+- Where are you hoping this course will take you?
+--
+
+- Go to the [Random Year Generator](https://pataruco.github.io/ga-fewd-assets/random-year/index.html) to get a year,
+  and give us an anecdote from that year
+---
+
+class: center middle section-title
+layout: false
+
+# Expectations
+
+---
+
+template: template
+layout: true
+
+## Things to remember about learning
+
+---
+
+Throughout this course, you will be
+
+- frustrated
+- surprised
+- amused
+- bemused
+- confused
+- satisfied
+
+--
+
+Learning is always an emotional experience.
+
+---
+
+> Statistically, the second source you read is the most helpful.
+--
+
+>
+> .attribute[
+&ndash; a statistics professor whose name I've forgotten
+]
+--
+
+
+.flex-row[
+  <picture>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 219 48" role="img"><path d="M49.752 30.824h59.917v17.132H49.75zm57.23 12.3c-.103.03-.21.048-.316.05-.338 0-.514-.15-.514-.582v-3.256c0-1.71-1.352-2.543-2.976-2.543a7.206 7.206 0 00-3.21.676l-.29 1.724 1.71.182.245-.842a2.338 2.338 0 011.147-.216c1.214 0 1.23.913 1.23 1.69v.234c-.407-.048-.818-.07-1.23-.068-1.71 0-3.49.433-3.49 2.276 0 1.563 1.23 2.144 2.31 2.144a2.7 2.7 0 002.41-1.494c.018.88.77 1.563 1.648 1.494a2.89 2.89 0 001.353-.338zm-4.604-.05a.787.787 0 01-.88-.867c0-.815.677-1.015 1.432-1.015.36.008.722.04 1.078.098-.05 1.235-.852 1.783-1.63 1.783zM97.388 33l-3.24 11.433h2.11L99.5 33.002zm-4.353 0l-3.24 11.433h2.11L95.145 33zm-6.89 6.645h2.243V36.94h-2.242zm0 4.802h2.243v-2.706h-2.242zm-3.617-1.64H80.1l4.156-4.736-.166-1.13h-6.58l-.268 2.63 1.546.164.338-1.163h2.343l-4.123 4.734.216 1.13h6.544l.467-2.63-1.69-.164zM72.143 36.79c-2.706 0-4.02 1.812-4.02 4.004 0 2.394 1.595 3.804 3.905 3.804 2.394 0 4.122-1.51 4.122-3.905-.003-2.093-1.32-3.906-4.01-3.906zm-.054 6.154c-1.165 0-1.763-.997-1.763-2.292 0-1.414.676-2.23 1.778-2.23 1.015 0 1.83.677 1.83 2.196 0 1.438-.73 2.327-1.846 2.327zm-5.906-3.564c0-1.78-1.224-2.594-2.577-2.594a2.51 2.51 0 00-2.44 1.612c-.367-1.1-1.364-1.613-2.443-1.613a2.48 2.48 0 00-2.276 1.278v-1.13h-3.14v1.63h.996v4.24h-.997v1.63h4.572v-1.63h-1.432V40.2c0-1.048.433-1.78 1.448-1.78.845 0 1.278.502 1.278 1.797v4.224h3.14v-1.63h-.996v-2.612c0-1.048.433-1.78 1.447-1.78.846 0 1.278.502 1.278 1.797v4.214h3.142V42.8h-.998zm78.791-22.39h-6.29c.23-1.935 1.16-3.558 3.274-3.558 2.245 0 3.2 1.857 3.016 3.558zM218.952 0v29.137h-169.2V0zM71.706 6.885h-3.85L61.51 20.01h-.104L54.882 6.884h-3.84v1.65h2.19V21.98H51.12v1.65h5.927v-1.65h-2.012V11.24h.1l5.75 11.553H61.9l5.62-11.474h.105v10.66h-1.962v1.65h5.942v-1.65h-2.09V8.536h2.19zm9.993 16.76c5.285 0 8.484-3.48 8.484-8.42 0-4.847-3.094-8.353-8.56-8.353H74.12v1.623h2.114v13.527H74.12v1.623zm27.05-16.76h-6.426v1.65h2.526v11.268h-.1L95.21 6.885H91.6v1.65h2.22V21.98h-1.935v1.65h6.385v-1.65h-2.655V10.444h.1l9.724 13.202h1.21V8.535h2.09zm26.71 5.29h-5.156v1.467h1.83l-1.857 7.247h-.128l-3.586-8.716h-1.21l-3.423 8.718h-.127l-2.14-7.247h1.933v-1.47h-5.41v1.467h1.522l3.25 10.003h1.352l3.432-8.766h.13l3.496 8.765h1.393l3.122-10.003h1.573zm6.704 11.727c2.837 0 4.514-1.583 4.83-3.568l-1.523-.338c-.36 1.42-1.365 2.347-3.17 2.347-2.283 0-3.53-1.468-3.636-4.02h8.058c.1-.445.153-.898.156-1.354-.024-2.71-1.728-5.03-4.873-5.03-3.246 0-5.26 2.58-5.26 6.14 0 3.712 2.162 5.825 5.412 5.825zm13.408 0c3.663 0 5.134-3.25 5.134-6.294 0-3.642-2.063-5.67-4.924-5.67-2.19 0-3.402 1.186-4.1 2.603V5.905h-3.53v1.47h1.692v12.923a22.8 22.8 0 01-.338 3.35h1.805a44.05 44.05 0 00.235-1.906c.747 1.39 2.242 2.165 4.02 2.165zm26.198-1.728h-1.985V5.904h-4.6v1.47h2.798v6.653c-.748-1.342-2.15-2.09-3.842-2.09-3.74 0-5.183 3.2-5.183 6.267 0 3.584 1.958 5.698 4.924 5.698 2.087 0 3.352-1.224 4.1-2.577v2.323h3.784zm6.963 1.728c3.53 0 5.75-2.526 5.742-6.006 0-3.25-1.934-5.982-5.647-5.982s-5.67 2.735-5.67 6.087c0 3.457 2.09 5.905 5.568 5.905zm12.942 0c3.172 0 4.538-2.114 4.866-4.112l-1.548-.34c-.334 1.885-1.315 2.917-3.094 2.917-2.27 0-3.507-1.637-3.507-4.397 0-2.475.982-4.487 3.43-4.487a4.4 4.4 0 012.45.646l.42 1.936 1.496-.18-.44-2.758c-1.16-.876-2.397-1.187-3.92-1.187-3.556 0-5.362 2.966-5.362 6.14 0 3.685 2.036 5.825 5.208 5.825zm11.166 0c2.76 0 4.874-1.34 4.847-3.595 0-4.565-7.1-2.195-7.1-5.184 0-1.177 1.03-1.69 2.474-1.69.826-.015 1.64.18 2.368.567l.267 1.864 1.495-.18-.284-2.68a8.135 8.135 0 00-3.997-1.06c-2.088 0-4.255.903-4.255 3.328 0 4.46 7.193 2.063 7.193 5.208 0 1.315-1.495 1.934-3.095 1.934a5.812 5.812 0 01-2.553-.568l.078-1.522-1.444-.156-.362 2.604c.977.643 2.736 1.133 4.36 1.133zm-54.042-6.11c0 2.373-1.058 4.564-3.584 4.564a3.455 3.455 0 01-3.534-3.456v-1.728c.05-1.7 1.444-3.686 3.635-3.686 1.948 0 3.48 1.444 3.483 4.305zm19.18-1.06v1.833c-.076 1.73-1.57 3.79-3.634 3.79-1.985 0-3.48-1.47-3.48-4.28 0-2.425 1.133-4.59 3.686-4.59a3.36 3.36 0 013.43 3.248zm14.597 1.133c0 2.58-1.34 4.488-3.79 4.488-2.453 0-3.74-1.958-3.74-4.46 0-2.55 1.34-4.434 3.74-4.434 2.397 0 3.79 1.778 3.79 4.405zm-104.39-2.593c0 4.16-2.32 6.763-6.574 6.763h-3.478V8.508h3.466c4.254 0 6.574 2.71 6.587 6.764zM.116 0h47.956v47.956H.116zM42.01 22.02c-.036-.723-.12-1.448-.17-2.166a1.74 1.74 0 00-.395-.98 2.465 2.465 0 00-1.026-.74c-.808-.314-1.622-.664-2.435-.975a21.509 21.509 0 01-3.342-1.472 2.626 2.626 0 01-1.296-1.972 2.954 2.954 0 00-1.47-2.228 4.062 4.062 0 00-2.958-.35c-.734.176-1.5.165-2.23-.033l-1.112-.34-.302-.09-.873-.26c-1.57-.468-2.228-.713-4.773-.278a14.678 14.678 0 00-7.09 3.897l-6.37 6.76h5.72l-3.504 3.71h6.026l-3.503 3.71h4.844l-1.548 4.06c5.93 6.07 12.25 7.295 12.25 7.295 0-1.673.38-8.24.826-9.34a5.25 5.25 0 01.762-1.54 4.211 4.211 0 013.393-1.547c1.303 0 2.597.238 3.815.702.74.31 1.577.264 2.277-.122a38.42 38.42 0 001.498-.94.839.839 0 01.556-.18c.54.06 1.054-.237 1.27-.734.16-.33.35-.64.524-.97.472-.884.69-1.88.633-2.88z"></path></svg>
+  </picture>
+
+  <picture>
+    <svg xmlns="http://www.w3.org/2000/svg" width="189" height="50" role="img">
+<path d="M42 31l-2.2-.2c-1.7-.1-2.3-.8-2.3-2 0-1.4 1-2.2 3-2.2 1.3-.1 2.6.3 3.6 1.1l1.3-1.3a7.5 7.5 0 00-4.8-1.4c-2.9 0-4.9 1.5-4.9 3.9 0 2.2 1.4 3.4 4 3.6l2.2.2c1.6.1 2.2.8 2.2 2 0 1.6-1.4 2.4-3.6 2.4-1.6.1-3.1-.5-4.2-1.6L35 36.8c1.5 1.4 3.5 2 5.5 1.9 3.2 0 5.5-1.5 5.5-4.1 0-2.6-1.6-3.4-4-3.6zm15.8-6.1c-2.2 0-3.5.4-4.7 1.9l1.3 1.3a3.6 3.6 0 013.4-1.5c2.5 0 3.4 1 3.4 2.9v1.3h-4c-3 0-4.6 1.5-4.6 3.9 0 1 .3 2 1 2.7.8.9 1.9 1.2 3.8 1.2 1.4.1 2.9-.4 3.9-1.4v1.3h2v-9.1c-.1-2.9-1.9-4.5-5.5-4.5zm3.4 8.9c.1.8-.1 1.7-.7 2.3a4 4 0 01-3 .9c-2.1 0-3.1-.7-3.1-2.3 0-1.6 1-2.4 3-2.4h3.8v1.5zm9.7-7.1c1.2 0 2.4.5 3.1 1.5l1.3-1.3a5.4 5.4 0 00-4.4-2c-3.4 0-5.9 2.3-5.9 6.9 0 4.6 2.6 6.9 5.9 6.9 1.7.1 3.3-.7 4.4-2L74 35.4c-.7 1-1.9 1.5-3.1 1.5-1.2.1-2.4-.5-3.1-1.5-.7-1.1-1-2.3-.9-3.6-.1-1.3.2-2.5.9-3.6.7-1 1.9-1.6 3.1-1.5zm16.8-1.6h-2.4L79.2 31V19.1h-2v19.4h2v-4.9l2.4-2.4 4.5 7.3h2.4l-5.6-8.6 4.8-4.8zm9.2-.2c-1.6 0-3.2.5-4.3 1.7-1.3 1.3-1.6 3-1.6 5.4 0 2.5.3 4.1 1.6 5.4a6.1 6.1 0 004.3 1.7c1.6.1 3.2-.5 4.3-1.7 1.3-1.3 1.6-2.9 1.6-5.4 0-2.5-.3-4-1.6-5.4a5.4 5.4 0 00-4.3-1.7zm1.7 10.5c-.9.8-2.3.8-3.2 0-.7-.7-.8-2-.8-3.4s.1-2.7.8-3.4c.9-.8 2.3-.8 3.2 0 .7.7.8 2 .8 3.4 0 1.5-.1 2.7-.8 3.4zM112.2 25l-2.8 8.6-2.8-8.6h-3.7l5.2 14h2.7l5.1-14h-3.7zm9.6 0c-3.6 0-6.1 2.5-6.1 7 0 5.7 3.2 7.2 6.5 7.2 2 .1 4-.7 5.3-2.2l-2.1-2c-.8.8-2 1.3-3.2 1.2a3 3 0 01-3.1-2.7v-.4h8.7v-1.6c.1-3.8-2.1-6.6-6-6.6zm-2.7 5.7l.3-1.5c.4-.9 1.3-1.4 2.3-1.4 1 0 1.9.5 2.3 1.4l.3 1.5h-5.2zm13.3-4.3v-1.3H129v14h3.5v-8.4c0-1.3.8-2.4 2.1-2.6h.2c.7 0 1.4.3 1.8.8l2.6-2.6A4.1 4.1 0 00136 25c-1.3 0-2.6.4-3.5 1.4zm7.6-2.8V39h3.5V28h2.6v-2.7h-2.6v-1.5c0-.6.3-1.2 1-1.3h1.5v-3h-2a3.9 3.9 0 00-4 3.8v.3zm20.3 1.3c-1.6 0-3.2.5-4.3 1.7-1.3 1.3-1.6 3-1.6 5.4 0 2.5.3 4.1 1.6 5.4a6.1 6.1 0 004.3 1.7c1.6.1 3.2-.5 4.3-1.7 1.3-1.3 1.6-2.9 1.6-5.4 0-2.5-.3-4-1.6-5.4a5.4 5.4 0 00-4.3-1.7zm1.7 10.5c-.9.8-2.3.8-3.2 0-.7-.7-.8-2-.8-3.4s.1-2.7.8-3.4c.9-.8 2.3-.8 3.2 0 .7.7.8 2 .8 3.4 0 1.5-.1 2.7-.8 3.4zM182.7 25l-2.3 8.6-2.9-8.6H175l-2.8 8.7-2.3-8.6h-3.7l4.3 14h2.9l2.9-8.8 2.9 8.8h3l4.3-14h-3.8zm-31.2 9.8V19.6H148V35a3.8 3.8 0 003.6 4h2.5v-3h-1.3c-.6.1-1.1-.2-1.3-.8v-.4zm-98.8-9.4H49V21h-2v13.9c0 2 1.1 3.6 3.4 3.6h1.4v-1.7h-1c-1.3 0-1.8-.7-1.8-2v-7.7h1.9l1.8-1.7z" fill="#222426"/>
+<path d="M26 41v-9h4v13H0V32h4v9h22z" fill="#BCBBBB"/>
+<path d="M23 34l.8-3-16.1-3.3L7 31l16 3zM9.2 23.2l15 7 1.4-3-15-7-1.4 3zm4.2-7.4L26 26.4l2.1-2.5-12.7-10.6-2.1 2.5zM21.5 8l-2.7 2 9.9 13.3 2.7-2L21.5 8zM7 38h16v-3H7v3z" fill="#F48024"/>
+</svg>
+  </picture>
+
+  <picture>
+  <img
+    alt="Each other"
+    src="/fewd-57-slides/assets/classmates-376x230.png"
+  />
+</picture>
+
+]
+
+---
+
+template: template
+layout: true
+
+## Expectations
+
+---
+
+class: grid-2
+
+.group[
+### The GA Student Experience
+
+- Open and friendly learning environment
+- Supportive, collaborative
+- Friendly yet challenging
+- Learn by doing - and making mistakes!
+- Be curious - ask lots of questions
+- Remember: no question is a stupid question
+
+
+- We'll focus on practical skills
+- We'll teach you how to continue learning
+]
+
+
+<picture>
+  <img
+    alt="GA Logo"
+    src="/fewd-57-slides/assets/ga-logo-red-900x900.png"
+  />
+</picture>
+
+
+---
+
+I expect you to ask questions. 
+--
+There are four reasons students don't ask questions:
+--
+
+1. They understand everything.
+--
+
+2. They think they're the only one who doesn't understand.
+--
+
+3. They're not sure how to phrase the question.
+--
+
+4. They understand nothing at all.
+---
+
+You expect me and Ana to…
+
+???
+
+At this point, we'll have a Slack post where people can reply.
+
+---
+
+### Learn by doing
+
+We'll work through exercises in class and as homework
+to learn and practice the knowledge and techniques
+of front-end web development.
+
+Our goal is to work towards creating your **final project**,
+a website that you choose to make.
+In our final session, you'll present them to your classmates.
+
+---
+
+### Method Over Memory
+
+Famously learnt once and never forgotten
+
+- riding a bike
+- tying shoelaces
+- using chopsticks
+
+Learnt painfully in preparation of an exam and immediately forgotten
+
+- quadratic formula
+- chemical formulae
+- big old Shakespeare quotes
+
+The difference is **method**.
+
+---
+
+### Teaching a process
+
+This course is very practical but aims to teach you a **process** so you can replicate the material in your own projects.
+
+You **don't need to remember everything** we cover in detail.
+You just need to remember the gist of it so you **look things up** online and in your notes.
+
+> "Never remember what you can look up in books."
+>
+> .attribute[&ndash; Albert Einstein, possibly]
+
+
+---
+
+class: middle center section-title
+layout: false
+
+# Installation and Setup
+
+---
+
+template: template
+layout: true
+
+## Installation and Setup
+
+---
+
+.exercise[
+Install everything here!
+]
+
+For us to succeed, there's some things else we need
+
+- A way to communicate
+  - [Slack][slack], where we'll communicate in [our #fewd57_5oct channel][our-slack]
+- A good web browser
+  - [Firefox Developer Edition][firefox] is the superior browser for developers
+  - [Chrome][chrome] is okay
+- A good text editor
+  - [VSCode][vscode] is superior
+  - SublimeText is okay
+  - Atom is okay (but I've never used it)
+- Some VSCode extensions
+  - [Live Server][liveserver]
+  - [Prettier][prettier]
+  - [Color Highlight][color-highlight]
+  - [Bracket Pair Colorizer 2][bracket-pair-colorizer]
+
+---
+
+.exercise[
+Install GitHub Desktop and setup your GitHub and CodePen accounts.
+]
+
+And a few more…
+
+- [GitHub Desktop][github-desktop]
+- Please create an account at [github.com](https://github.com)
+- Please create an account at [codepen.io](https://codepen.io)
+
+We'll use these to share coding exercises and you'll use them to submit homework
+or other exercises for feedback.
+
+Please share your GitHub username with Robin and Ana, so we can invite you to the exercise repositories.
+
+---
+
+.exercise[
+Let's clone the exercises.
+]
+
+Once we're all set up, we'll be able to go to
+[our shared code repository][rjkerrison/fewd-57-exercises],
+and follow the instructions to _clone_ that code locally using GitHub Desktop.
+
+We'll be able to run a website locally using the [Live Server][liveserver] extension locally.
+
+Let's start with the one in the _hello-world_ folder.
+
+???
+
+We'll need a volunteer to demonstrate.
+
+---
+
+We'll be using [our shared code repository][rjkerrison/fewd-57-exercises]
+to submit homeworks and other exercises for feedback.
+
+Ana and I are here to assist if you have any problems using GitHub.
+
+---
+
+template: template
+
+## Lesson 1
+
+Let's get started with [our first lesson][lesson-1].
+
+
+[slack]: https://slack.com/downloads "Slack Desktop"
+[our-slack]: https://ga-ldn-fwd.slack.com/archives/C01BDKBF6M9 "GA London Front-End Web Development Slack"
+[firefox]: https://www.mozilla.org/en-US/firefox/developer/ "Firefox Developer Edition"
+[chrome]: https://www.google.co.uk/chrome/ "Chrome"
+[vscode]: https://code.visualstudio.com/ "VSCode"
+[github-desktop]: https://desktop.github.com/ "GitHub Desktop"
+
+[color-highlight]: https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight "Color Highlight on VSCode Extensions"
+[bracket-pair-colorizer]: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2 "Bracket Pair Colorizer 2 on VSCode Extensions"
+[liveserver]: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer "LiveServer on VSCode Extensions"
+[prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode "Prettier on VSCode Extensions"
+
+[rjkerrison/fewd-57-exercises]: https://github.com/rjkerrison/fewd-57-exercises "FEWD 57 Exercises on GitHub"
+[lesson-1]: /fewd-57-slides/lessons/01-html.html "Lesson One: HTML"`
+    </script>
+    <script type="text/javascript">
+      const slideshow = remark.create({
+        navigation: { scroll: false },
+        source: sourceContent,
+        countIncrementalSlides: false,
+        ratio: '16:9',
+        highlightLines: true,
+        highlightStyle: 'github',
+      })
+
+      document.querySelectorAll('.remark-slide input').forEach((el) => {
+        el.addEventListener('keypress', (event) => {
+          event.stopPropagation()
+        })
+      })
+    </script>
+  </body>
+</html>

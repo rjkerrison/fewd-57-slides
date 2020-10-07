@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Semantic HTML and CSS</title>
+    <link rel="stylesheet" href="/fewd-57-slides/assets/presentation.css" />
+  </head>
+  <body>
+    <script
+      src="/fewd-57-slides/assets/remark.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      // eslint-disable
+      const sourceContent = `
+
+class: title center middle
+
+# Semantic HTML and CSS
+
+---
+
+name: template
+layout: true
+
+.logo[
+<picture>
+  <img alt="logo" src="/fewd-57-slides/assets/ga-logo-red-256x256.png" />
+</picture>
+
+FEWD 57
+]
+
+
+---
+template: template
+layout: false
+
+## Previously, on FEWD
+
+- HTML is an acronym for what?
+- What is HTML?
+- How would you recognise HTML?
+- What are the two parts of an HTML attribute?
+- What are the 3 tags on every web page?
+- How is HTML organised?
+
+All of this was covered in [lesson one][lesson-1].
+
+---
+
+template: template
+layout: false
+
+## Today's Learning Objectives
+
+- Choose semantic HTML tags to define and organise content
+- Use CSS to apply style to web pages
+- Learn the basics of CSS syntax
+  - selectors!
+  - style rules!
+
+---
+
+class: middle center section-title
+layout: false
+
+# Semantic HTML
+
+---
+
+template: template
+layout: false
+
+## Semantic HTML
+
+> "[Semantic HTML][wikipedia-semantic-html] is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users."
+>
+> .attribute[– Wikipedia, October 2020]
+
+We can build our webpages to **look** however we want.
+That's the purpose of CSS!
+
+_Semantic HTML_ means building webpages by using HTML to define **the meaning in our webpages**.
+
+---
+
+template: template
+layout: true
+class: grid-2 grid-no-margins grid-2-wide
+
+## Semantic Elements
+
+.heading[
+  Element
+]
+
+.heading[
+  Description
+]
+
+---
+
+### main
+
+Indicates the main content of a page.
+
+### header
+
+Content placed above the main content which contextualises that content.
+
+### nav
+
+A navigation section.
+
+### section
+
+Typically indicates one of several, equally placed segments of content.
+
+### aside
+
+Supplementary content, typically placed next to the \`<main>\` or \`<section>\` element it supplements.
+
+### div
+
+A generic, **non-semantic** division.
+
+---
+
+template: template
+layout: false
+
+## Semantic Elements
+
+.exercise[
+  Spot the difference!
+
+  Explore two versions of the same webpage: one with semantic HTML, and one with generic HTML.
+]
+
+View the two webpages in [the exercises repository][exercises]
+at _example/semantic_.
+
+Discuss in small groups the difference between the webpages.
+
+---
+
+class: middle center section-title
+layout: false
+
+# CSS Basics
+
+---
+
+template: template
+layout: true
+
+## CSS Basics
+
+---
+
+class: grid-2
+
+<picture>
+  <img
+    alt="A chair"
+    src="/fewd-57-slides/assets/02-css/chair.png"
+  />
+</picture>
+
+
+???
+
+CSS is what makes sites look the way they do.
+
+HTML could say "boat" but the CSS determines the style of the boat.
+Similarly, "chair."
+
+--
+
+.group[
+- wooden or leather
+- straight or curved
+- red or black
+
+All of these are styling concerns.
+]
+
+---
+
+.exercise.guided[
+Let's look at our handy example.
+]
+
+There's a handy example in [our shared code repository][exercises],
+which covers many of the common CSS selectors and properties.
+
+Keep referring back to this example as we learn CSS basics.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/yLYLmZb)
+- [Solution code](https://codepen.io/pataruco/pen/JjYjgza)
+
+---
+
+class: middle center section-title
+layout: false
+
+# Anatomy of CSS
+
+---
+
+template: template
+layout: true
+
+## Anatomy of CSS
+
+---
+
+\`\`\`css
+p {
+  color: rgb(255, 128, 0);
+  font-size: 20px;
+  font-style: italic;
+}
+\`\`\`
+
+This is a **CSS declaration block**.
+
+It begins with a CSS selector and an opening curly brace,
+and closes with a single curly brace.
+
+???
+
+Missing curly braces are a common cause of broken CSS.
+If you find your style rules aren't being applied,
+missing curly braces could be the reason.
+
+---
+
+\`\`\`css
+*p {
+  color: rgb(255, 128, 0);
+  font-size: 20px;
+  font-style: italic;
+*}
+\`\`\`
+
+\`p\` here is a **CSS selector**.
+
+We always need a CSS selector at the start of a CSS declaration block.
+This tells the browser to which elements to apply the styling rules.
+
+There are lots of ways we can select an element.
+
+The simplest is by using the tag name, which is what's happening in this example: \`p\` is the tag name of a \`<p>\` paragraph element.
+
+The rules in this declaration block will apply to all \`<p>\` elements on our webpage.
+
+---
+
+\`\`\`css
+p {
+* color: rgb(255, 128, 0);
+* font-size: 20px;
+* font-style: italic;
+}
+\`\`\`
+
+In each of these lines inside the declaration block,
+we define a rule in the same format of \`property: value;\`.
+
+The \`property\` tells the browser what to change about our selected elements,
+and the \`value\` tells the browser how to change it.
+
+The semi-colon at the end is vitally important.
+It is the end of the property rule declaration.
+Without it, the following line is included as part of our property declaration,
+our CSS is likely to be invalid, and styling errors will occur.
+
+???
+
+Missing semi-colons are a common cause of broken CSS.
+If you find your style rules aren't being applied,
+missing semi-colons could be the reason.
+
+---
+
+\`\`\`css
+p {
+* color: rgb(255, 128, 0);
+  font-size: 20px;
+  font-style: italic;
+}
+\`\`\`
+
+Here, we're declaring the \`color\` of the text inside our \`p\` elements.
+The \`rgb(255, 255, 255)\` syntax is one of several ways to declare colours in CSS.
+
+---
+
+\`\`\`css
+p {
+  color: rgb(255, 128, 0);
+* font-size: 20px;
+  font-style: italic;
+}
+\`\`\`
+
+Here, we're declaring the \`font-size\`, the size of the text inside our \`<p>\` elements.
+In this example, \`20px\` sets the height of a character to 20 pixels,
+from the bottom of a "p" character to the top of a "d".
+
+---
+
+\`\`\`css
+<where> {
+ <what>: <how>;
+}
+\`\`\`
+
+This may be a helpful way to remember the parts of a CSS
+declaration block, as defining the _where_, _what_, and _how_.
+
+---
+
+class: grid-4
+
+.heading[
+property declaration
+]
+
+\`color: rgb(255, 128, 0);\`
+
+\`font-size: 20px;\`
+
+\`font-style: italic;\`
+
+.heading[
+property
+]
+
+\`color\`
+
+\`font-size\`
+
+\`font-style\`
+
+.heading[
+value
+]
+
+\`rgb(255, 128, 0)\`
+
+\`20px\`
+
+\`italic\`
+
+---
+
+template: template
+layout: false
+
+## Reading CSS
+
+.exercise[
+Discuss how the following CSS would look on a page.
+]
+
+\`\`\`css
+p {
+  color: blue;
+  font-size: 16px;
+}
+
+a {
+  color: red;
+  text-decoration: underline;
+  font-size: 24px;
+}
+\`\`\`
+
+---
+
+layout: false
+class: middle center section-title
+
+# CSS Selectors
+
+---
+
+template: template
+layout: true
+
+## CSS Selectors
+
+---
+
+.exercise.guided[
+Let's look at how CSS selectors work.
+]
+
+In [rjkerrison/fewd-57-exercises][exercises], at _examples/css-selectors_,
+we'll look at examples of CSS selectors.
+
+- tag
+- attribute
+- class
+- id
+
+---
+
+Selectors tell the browser which elements should be impacted by the style. CSS rules are applied in order of **specificity**.
+
+- Tag selectors
+  - The least specific selectors; apply to all elements of the given tag type.
+  - Syntax is simply the name of the tag: \`h1\`.
+- Class selectors
+  - Apply to all elements with the chosen class attribute.
+  - Syntax starts with a dot, followed by the name of the class: \`.class-name\`.
+- Attribute selectors
+  - Apply to all elements with a matching attribute.
+  - Syntax wraps the attribute check in square brackets
+  - \`[my-attribute]\` matches anything with an attribute whose name is \`my-attribute\`
+  - \`[my-attribute="some value"]\` matches only elements with a \`my-attribute\` attribute whose value is \`some value\`
+- ID selectors
+  - Apply to all elements with the given ID attribute.
+  - Syntax starts with a hashtag, followed by the name of the ID: \`#id-name\`.
+
+---
+
+template: template
+layout: false
+class: middle center
+
+.large[
+ID > Class or Attribute > Tag
+]
+
+---
+
+template: template
+layout: false
+class: center
+
+## Specificity and Order
+
+When we have two or more rules of equal specificity,
+the order that those rules are declared determines which wins.
+
+.large[
+  Specificity first.
+
+  Order second.
+]
+
+This is largely what we mean by **cascading** style sheets.
+
+---
+
+template: template
+layout: false
+
+## Keep it vague
+
+When defining rules, it helps to be as vague as we can,
+declaring global rules for all paragraphs,
+and using generic classes like \`.message\` or \`.notification\`.
+
+That way, we leave some room for overriding in our specific cases.
+We can make overrides by relying on the **order** rule.
+
+If we have a generic \`.message\` class,
+we can override the colour scheme for the specific \`.error\` messages
+by declaring our \`.error\` block later than our \`.message\` block.
+
+\`\`\`css
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  color: black;
+}
+
+.error {
+  background-color: red;
+  color: white;
+}
+\`\`\`
+
+---
+
+template: template
+layout: true
+
+## Overriding CSS
+
+---
+
+As well as the specificity rules,
+there are some silver bullets for overriding CSS rules.
+
+\`\`\`html
+<p style="color: green">
+  Green paragraph
+</p>
+<p>
+  Regular paragraph
+</p>
+\`\`\`
+
+### \`style\` attribute
+
+In your HTML, you can set styling using \`style\` attribute.
+This applies only to the element where it's defined.
+
+HTML has the final say, and it can override anything CSS has defined, except…
+
+---
+
+…the last-resort for making a CSS rule stick.
+
+\`\`\`css
+p {
+  color: red !important;
+}
+\`\`\`
+
+### \`!important\`
+
+If you really need to make something stick,
+and prevent HTML or higher specificity overrides, you can use \`!important\`, like \`color: red !important;\`.
+
+This will apply to **every matching element**.
+
+**Be careful**, as once you've introduced \`!important\` or \`style\` attributes,
+the only way to override them is with more \`!important\` statements.
+Eventually, when all your code is \`!important\`, nothing will be.
+
+???
+
+This is a bad thing to do often,
+especially in shared codebases.
+It makes CSS much more difficult to understand.
+
+---
+
+template: template
+layout: false
+class: middle center
+
+.large[
+!important > style > ID > Class or Attribute > Tag
+]
+
+---
+
+template: template
+layout: true
+
+## Multiple selectors
+
+---
+
+\`\`\`css
+p, div {
+  color: darkblue;
+  background-color: yellow;
+}
+\`\`\`
+
+By separating \`p\` and \`div\` with a comma,
+we're selecting **both**.
+
+We can extend this to as many selectors as we want.
+
+\`\`\`css
+.message, .notification, .highlight {
+  background-color: yellow;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+}
+\`\`\`
+
+It's handy when we want to have similar classes.
+
+---
+
+template: template
+layout: true
+
+## Descendant selectors
+
+---
+
+\`\`\`css
+.sidebar p {
+  margin: 0;
+}
+
+p > a {
+  color: red;
+}
+\`\`\`
+
+When we have a selector like \`.sidebar p\`,
+it selects any \`<p>\` element which is a **descendant** of a \`.sidebar\`.
+
+\`p > a\` selects any \`<a>\` element which is a direct **child** of a \`<p>\` element.
+
+\`\`\`html
+<div class="sidebar">
+  <a href="/index.html">
+    <p>Welcome to my site, you can go home if you like.</p>
+  </a>
+  <p>Do you want to visit the <a href="https://bbc.co.uk/">BBC website</a>?</p>
+</div>
+\`\`\`
+
+???
+
+In this example,
+both paragraphs will be given the \`margin: 0;\` rule.
+
+Only the second \`<a>\`, inside the \`<p>\` will get the \`color: red\` instruction.
+
+---
+
+template: template
+layout: true
+
+## Selector combinators
+
+---
+
+class: grid-3 grid-5-flow-column grid-no-margins
+
+.heading[
+combinator name
+]
+
+Descendant
+
+Child
+
+Adjacent sibling
+
+General sibling
+
+.heading[
+example
+]
+
+\`div p\`
+
+\`article > p\`
+
+\`h1 + p\`
+
+\`p ~ img\`
+
+.heading[
+description
+]
+
+All paragraphs inside a \`<div>\`
+
+All paragraphs direct children of an \`<article>\`
+
+All paragraphs immediately following an \`h1\`
+
+All images that are siblings following paragraphs
+
+---
+
+template: template
+layout: true
+
+## Complex selectors
+
+---
+
+\`\`\`css
+div.message {
+  color: red;
+  background-color: black;
+}
+a.message#notification {
+  font-weight: bold;
+  color: black;
+  background-color: red;
+}
+a[href="/index.html"] {
+  background-image: url('/images/home.png');
+}
+.message[data-custom] {
+  background-color: green;
+}
+.message.error {
+  border: 10px red dashed;
+}
+\`\`\`
+
+We can combine selectors, like above.
+We can combine tags, class names, ids,
+attributes.
+
+We can even have multiple class names in one selector.
+
+---
+
+template: template
+layout: false
+class: grid-2 gapless
+
+.group.primary[
+  ## General Selectors
+
+  .center.large[
+    Cascade throughout HTML
+  ]
+
+  Using generic selectors will result in
+  styles that **cascade** and affect many
+  elements on our pages
+
+  Site-wide text styles, i.e.
+  general headings and paragraph styles,
+  link styles, form styles.
+
+\`\`\`css
+h2 {
+  …
+}
+p {
+  …
+}
+a {
+  …
+}
+\`\`\`
+]
+
+.group[
+  ## Specific Selectors
+
+  .center.large[
+    Target limited elements
+  ]
+
+  Classes are great for styles that
+  are only for specific components
+
+  Spacing of individual elements,
+  styling of buttons, banners, headers,
+  or footers, or big splash paragraphs
+  or special links.
+
+\`\`\`css
+.sidebar h2 {
+  …
+}
+p.lead {
+  …
+}
+a.external {
+  …
+}
+\`\`\`
+]
+
+---
+
+layout: false
+class: middle center section-title
+
+# CSS Properties
+
+---
+
+template: template
+layout: true
+
+## CSS Properties
+
+---
+
+\`\`\`css
+p {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  border: 1px solid black;
+}
+\`\`\`
+
+**Properties** are the part of a CSS rule that control the style
+of the selected element.
+
+Most properties have a really sensible, human-readable names.
+Some can cause confusion. If in doubt, test it out,
+or check documentation at [MDN][mdn] or elsewhere.
+
+Remember the format
+
+.center.large[\`
+  <property name>: <property value>;
+\`]
+
+---
+
+.acronym-initial[D]on't .acronym-initial[R]epeat .acronym-initial[Y]ourself
+
+If you're making the same declarations multiple times,
+consider being smarter with your selectors.
+
+\`\`\`css
+.message, .notification {
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.message {
+  color: black;
+  background-color: lightgrey;
+}
+
+.notification {
+  color: red;
+  background-color: yellow;
+}
+\`\`\`
+
+???
+
+_Don't Repeat Yourself_ is a really common mantra
+amongst developers.
+Developers are lazy in a good way.
+Preventing yourself from having to repeat yourself
+makes your code neater, and more useful.
+
+By remembering **DRY**, you can get more done in less time.
+
+---
+
+layout: true
+template: template
+
+## The Wide Universe of CSS Properties
+
+---
+
+class: center
+
+.large[
+  No developer remembers everything.
+]
+
+<picture>
+  <img src="https://media.giphy.com/media/FY9chKp6rulXy/source.gif" alt="the wide universe">
+</picture>
+
+.large[
+  Just remember what planet you're on.
+]
+
+---
+
+class: grid-2 grid-2-wide grid-no-margins
+
+.heading[
+  Property Name
+]
+
+.heading[
+  Description
+]
+
+background, background-color
+
+The style behind an element, whether
+an image, colour, or a gradient.
+
+border
+
+Styles the edges around the element.
+
+color
+
+Sets the colour of the text.
+
+font
+
+Controls the font family, its size, style, and weight.
+
+height, width
+
+Sets how tall or how wide an element is. Can be in \`px\`, \`%\` of a parent,
+\`em\`s, and a few others.
+
+margin
+
+Creates external space, between the border of an element and nearby elements.
+
+padding
+
+Creates internal space, between the border of an element and its interior content.
+
+text-align
+
+Defines whether the text lines up against the left edge, centres around the middle, or lines up against the right edge of the bounding box.
+
+---
+
+There are many, many, many, many, many, many, many more CSS properties.
+
+You can always find the official documentation at [MDN][mdn].
+
+Another great way to learn is to **inspect your favourite websites**.
+Practice recreating them to explore how they achieve their styles.
+
+---
+
+layout: false
+class: middle center section-title
+
+# CSS Good Practice
+
+---
+
+template: template
+layout: true
+
+## CSS structure tips
+
+---
+
+- Put every \`property: value;\` pair on a new line
+- Organise properties logically
+  - keep text colour and font size styles together
+  - keep margin, padding, and border together
+- Organise selectors logically
+  - keep everything related to your header together
+  - keep everything related to your footer together
+  - keep special homepage styling together
+- Use whitespace and indentation to make your code more readable
+  - Formatting tools like Prettier help with this
+
+All these practices will make it much easier for you
+and your team of developers to understand
+your CSS and to make sensible changes.
+
+---
+
+template: template
+layout: true
+
+## Linking CSS to HTML
+
+---
+
+Remember the \`<head>\` part of the HTML document.
+
+\`\`\`html
+<head>
+  <title>Robin's Blog</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+\`\`\`
+
+We **link** our CSS to our HTML by using a \`<link>\` element.
+
+The \`href\` value must resolve to your file for this to work.
+In the case here, we're telling the browser to look inside the directory called \`styles\` for a file called \`main.css\`.
+
+---
+
+layout: false
+class: middle center section-title
+
+# Homework
+
+---
+
+template: template
+layout: false
+
+## Homework
+
+.exercise[
+  Create and style a press release for GA.
+]
+
+Full homework instructions are in our [exercises][exercises]
+repository,
+at _homework/basics/starter/instructions.md_.
+
+---
+
+template: template
+layout: false
+class: grid-2 gapless
+
+.group.primary[
+## Key Takeaways
+
+.center.large[
+  CSS cascades though our webpage
+]
+
+- Style is defined by **properties** and **values**
+- Selectors can apply consistent styles across a whole webpage
+- Semantic HTML helps coordinate with CSS
+]
+
+.group[
+## Next Time, on FEWD
+
+.center.large[
+  The CSS Box Model
+]
+
+- The box model defines sizing and spacing of elements
+- We'll explore **margin**, **padding**, **height**, and **width**
+
+All to come in [our third lesson][lesson-3].
+]
+
+---
+
+layout: false
+class: title center middle
+
+# See you next time!
+
+[mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
+[pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
+[exercises]: https://github.com/rjkerrison/fewd-57-exercises "FEWD 57 Exercises on GitHub"
+
+[wikipedia-semantic-html]: https://en.wikipedia.org/wiki/Semantic_HTML "Semantic HTML on Wikipedia"
+
+[lesson-1]: /fewd-57-slides/lessons/01-html.html "Lesson One: HTML"
+[lesson-3]: /fewd-57-slides/lessons/02-box-model.html "Lesson Two: Box Model"`
+    </script>
+    <script type="text/javascript">
+      const slideshow = remark.create({
+        navigation: { scroll: false },
+        source: sourceContent,
+        countIncrementalSlides: false,
+        ratio: '16:9',
+        highlightLines: true,
+        highlightStyle: 'github',
+      })
+
+      document.querySelectorAll('.remark-slide input').forEach((el) => {
+        el.addEventListener('keypress', (event) => {
+          event.stopPropagation()
+        })
+      })
+    </script>
+  </body>
+</html>

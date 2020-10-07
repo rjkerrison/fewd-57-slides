@@ -1,0 +1,151 @@
+.weird p {
+  flex-basis: 30%;
+  padding: 1rem;
+  flex-shrink: 1;
+}
+.large {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.weird p:nth-of-type(5n + 1) {
+  animation: weird 10s 3s linear infinite,
+    weird-colour 2.5s 0.25s linear infinite;
+}
+
+.weird p:nth-of-type(5n + 2) {
+  animation: weird 7.5s 5s linear infinite,
+    weird-colour 8s 0.25s linear infinite;
+}
+
+.weird p:nth-of-type(5n + 3) {
+  animation: weird 10s 5.5s linear infinite,
+    weird-colour 5s 0.25s linear infinite;
+}
+
+.weird p:nth-of-type(5n + 4) {
+  animation: weird 6.5s 7.5s linear infinite,
+    weird-colour 2.5s 0.25s linear infinite;
+}
+
+.weird p:nth-of-type(5n) {
+  animation: weird 10s 7.5s linear infinite,
+    weird-colour 5s 1.25s linear infinite;
+}
+
+.glow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.glow p {
+  flex-basis: 10rem;
+  padding: 1rem;
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.glow p:nth-of-type(5n + 1) {
+  animation: glow 10s 3s linear infinite,
+    weird-colour 2.5s 0.25s linear infinite;
+}
+
+.glow p:nth-of-type(5n + 2) {
+  animation: glow 7.5s 5.5s linear infinite,
+    weird-colour 8s 0.25s linear infinite;
+}
+
+.glow p:nth-of-type(5n + 3) {
+  animation: glow 10s 5.5s linear infinite,
+    weird-colour 5s 0.25s linear infinite;
+}
+
+.glow p:nth-of-type(5n + 4) {
+  animation: glow 6.5s 7.5s linear infinite,
+    weird-colour 2.5s 0.25s linear infinite;
+}
+
+.glow p:nth-of-type(5n) {
+  animation: glow 10s 7.5s linear infinite,
+    weird-colour 5s 1.25s linear infinite;
+}
+
+@keyframes weird-colour {
+  0% {
+    color: black;
+  }
+  12% {
+    color: rgba(76, 124, 227, 0.7);
+  }
+  60% {
+    color: rgba(103, 145, 69, 0.7);
+  }
+  87% {
+    color: rgba(218, 199, 89, 0.7);
+  }
+  95% {
+    color: rgba(162, 73, 240, 0.7);
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes weird {
+  0% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+  5% {
+    transform: scale(1.2);
+    transform-origin: center;
+  }
+  12% {
+    transform: translate(10%, 40%) scale(1.2) rotate(1.26turn);
+    transform-origin: 40% 60%;
+  }
+  60% {
+    transform: translate(-15%, 19%) scale(1.9) rotate(-1.76turn);
+    transform-origin: 50% 40%;
+  }
+  87% {
+    transform: translate(5%, -39%) scale(0.7) rotate(0.26turn);
+    transform-origin: 60% 40%;
+  }
+  95% {
+    transform: scale(1.1);
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: none;
+  }
+  5% {
+    text-shadow: 0 0.125rem 0.125rem rgba(240, 205, 6, 0.8);
+  }
+  12% {
+    text-shadow: 0 0.125rem 0.125rem rgba(79, 198, 225, 0.8);
+  }
+  40% {
+    text-shadow: 0 0.125rem 0.125rem rgba(97, 230, 124, 0.8);
+  }
+  67% {
+    text-shadow: 0 0.125rem 0.125rem rgba(184, 53, 249, 0.8);
+  }
+  81% {
+    text-shadow: 0 0.125rem 0.125rem rgba(243, 168, 39, 0.8);
+  }
+  95% {
+    text-shadow: 0 0.125rem 0.125rem rgba(42, 225, 245, 0.8);
+  }
+  100% {
+    text-shadow: none;
+  }
+}

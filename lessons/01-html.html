@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Introduction to HTML</title>
+    <link rel="stylesheet" href="/fewd-57-slides/assets/presentation.css" />
+  </head>
+  <body>
+    <script
+      src="/fewd-57-slides/assets/remark.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      // eslint-disable
+      const sourceContent = `
+
+class: title center middle
+
+# Introduction to HTML
+
+---
+
+name: template
+layout: true
+
+.logo[
+<picture>
+  <img alt="logo" src="/fewd-57-slides/assets/ga-logo-red-256x256.png" />
+</picture>
+
+FEWD 57
+]
+
+
+---
+## Lesson 1
+
+Our Learning Goals:
+
+- Create HTML documents using common element tags.
+- Inspect web pages using the browser’s developer tools.
+- Describe the relationship between HTML, CSS, and JavaScript in websites.
+
+---
+
+template: template
+layout: true
+
+## HyperText Markup Language
+---
+
+**H**yper**T**ext **M**arkup **L**anguage is the language with which we create documents.
+--
+
+
+We're lazy, so we call it **HTML**.
+--
+
+
+It's called **hypertext** because it is **better than regular old text**.
+--
+
+
+It's closely related to **HTTP** and **HTTPS**,
+or **H**yper**T**ext **T**ransfer **P**rotocol (**S**ecure)
+--
+
+
+**Hypertext** is **better than regular old text** because it allows us to add…
+--
+
+- links!
+--
+
+- structure
+--
+
+- meta information
+--
+
+- styling (using CSS)
+--
+
+- functionality (using JS)
+---
+
+.acronym-initial[C]ascading .acronym-initial[S]tyle.acronym-initial[S]heets provide styling,
+and .acronym-initial[J]ava.acronym-initial[S]cript provides functionality.
+What comes before those, what the HTML has to define, can be thought of as **structure**.
+
+--
+
+
+### A loose analogy
+
+HTML is the brickwork, the shape, the windows and the fittings. CSS is wallpaper and decorations.
+JS is all the appliances, all the functional parts you can change by interacting with them.
+
+---
+
+class: middle center section-title
+layout: false
+
+# A basic example webpage
+
+---
+
+template: template
+layout: true
+name: example
+
+## An example
+---
+
+Enough chat! Let's see what the fuss is about.
+--
+
+\`\`\`html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+  </head>
+  <body>
+    <p>Hello, FEWD 57!</p>
+  </body>
+</html>
+
+\`\`\`
+
+--
+
+This would look an awful lot like [this webpage](/fewd-57-slides/example).
+
+---
+
+template: example
+layout: true
+
+Let's take a deeper look.
+
+---
+
+\`\`\`html
+*<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+  </head>
+  <body>
+    <p>Hello, FEWD 57!</p>
+  </body>
+</html>
+\`\`\`
+
+--
+
+
+This is the **doctype** declaration.
+It tells the web browser what **type of document** (hence the name) this file is.
+--
+
+
+In our cases, it will always be \`<!DOCTYPE html>\`.
+
+---
+
+\`\`\`html
+<!DOCTYPE html>
+*<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+  </head>
+  <body>
+    <p>Hello, FEWD 57!</p>
+  </body>
+*</html>
+\`\`\`
+
+--
+
+Now that we've told the browser we have an \`html\` document type,
+we indicate where all our HTML is: inside the \`<html>\` tag!
+
+We also let the browser know that the language (\`lang\`) of the information in this document
+is English. 
+Why might we do that?
+--
+
+
+Yes, well done <input type="text" placeholder="Name" name="name" />!
+Check out _[une petite exemple](/fewd-57-slides/exemple)_.
+
+---
+
+\`\`\`html
+<!DOCTYPE html>
+<html lang="en">
+* <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+* </head>
+  <body>
+    <p>Hello, FEWD 57!</p>
+  </body>
+</html>
+\`\`\`
+
+--
+
+
+The \`<head>\` is where we have information that isn't part of the displayed document.
+
+It's further information that's helpful to browsers.
+
+---
+
+\`\`\`html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A friendly hello example page</title>
+  </head>
+* <body>
+    <p>Hello, FEWD 57!</p>
+* </body>
+</html>
+\`\`\`
+
+--
+
+
+The \`<body>\`, by contrast, is where we keep everything we want users to see.
+
+---
+
+class: middle center section-title
+layout: false
+
+# Anatomy of HTML
+
+---
+
+template: template
+layout: true
+name: anatomy
+
+## Anatomy of HTML
+
+---
+
+HTML is made up of tags and attributes.
+
+Tags tell the browser how to encode the content.
+
+There's lots of different types of content, such as
+
+- headings
+- paragraphs
+- links
+- images
+- videos
+
+---
+
+class: grid-4
+
+.heading[
+Opening Tags
+and Closing Tags
+]
+
+.grid-column-span-3[
+\`\`\`html
+<p>Hello GA</p>
+\`\`\`
+
+We have an _opening tag_, a _closing tag_, and in the middle, we have _content_.
+
+In this case, our _content_ is just plain text, as it will be shown to the user.
+]
+
+.heading[
+Self-closing Tags
+]
+
+.grid-column-span-3[
+\`\`\`html
+<img src="picture.jpg" alt="A lovely picture" />
+\`\`\`
+
+We have a _self-closing tag_, and the content isn't text, but instead it's an image.
+
+In this case, the image data are fetched by the browser by loading the resource at the location specified in the _src_ attribute.
+]
+
+---
+
+### Attributes
+
+\`\`\`html
+<img src="picture.jpg" alt="A lovely picture" />
+\`\`\`
+
+Our friendly \`<img />\` tag has two attributes,
+defining the source (\`src\`) and the text alternative (\`alt\`).
+Both of these are interpreted by the browser.
+
+Attributes always exist on the **opening tag** of an element, never the closing tag. If we have a self-closing tag then there's only one tag where it can appear: it's still the opening one!
+
+They have two parts to them, a **name** and a **value**.
+We separate them by a single equals sign,
+which when we're coding is usually _the assignment operator_.
+We're telling the browser that the **name** attribute has the value of **value**.
+We're _assigning_ the value to that name.
+
+---
+
+### Attributes
+
+\`\`\`html
+<a href="https://nytimes.com">New York Times</a>
+\`\`\`
+
+Here, we're creating a link, otherwise known as an _anchor_.
+--
+
+
+So the browser knows where to take the user,
+we provide an \`href\`, a _hyperlink reference_,
+by declaring that \`href="https://nytimes.com/"\`.
+
+---
+
+class: grid-4
+
+.heading[
+attribute declaration
+]
+
+\`src="picture.jpg"\`
+
+\`alt="A lovely picture"\`
+
+\`href="https://nytimes.com/"\`
+
+.heading[
+name
+]
+
+\`src\`
+
+\`alt\`
+
+\`href\`
+
+.heading[
+value
+]
+
+\`picture.jpg\`
+
+\`A lovely picture\`
+
+\`https://nytimes.com\`
+--
+
+
+.grid-column-span-4[
+What a web browser does with the attributes we provide
+is determined by two things: the HTML specification,
+and some additional browser behaviour.
+]
+--
+
+
+.grid-column-span-4[
+For instance, if we add an \`href\` attribute to an \`<img>\` tag,
+browsers won't do anything with this.
+Similarly, a \`src\` attribute on an \`<a>\` tag will be ignored.
+]
+
+---
+
+class: middle center section-title
+layout: false
+
+# Element Inspector
+
+---
+
+template: template
+layout: true
+
+## How to be a spy
+
+---
+
+As developers,
+we don't need a trench coat and a magnifying glass to
+inspect other websites.
+
+We can use the **element inspector**.
+
+<picture>
+  <img
+    alt="Preview of a right-click to inspect the element."
+    src="/fewd-57-slides/assets/01-html/element-inspector-right-click.png"
+  />
+</picture>
+
+
+---
+
+.exercise[
+Pick your favourite website, and identify three tags on it.
+]
+
+This is really useful, as a way to understand how other websites work.
+
+You can look at how another website has used HTML and CSS using the inspector,
+and it can help you to check or modify your own websites.
+
+To view the HTML structure of your chosen page,
+right click on any element and choose **Inspect Element** on Firefox
+or **Inspect** on Chrome.
+This will open the element inspector part of the developer tools. 
+
+From here, you can view and edit the HTML structure underlying the page.
+
+Use resources such as [**MDN** (Mozilla Developer Network)][mdn]
+to get a sense of what the tag means and its most common use cases.
+
+---
+
+class: middle center section-title
+layout: false
+
+# Structure of HTML
+
+---
+
+template: template
+layout: true
+
+## Structure of HTML
+
+---
+
+HTML provides the structure and the content of the webpage.
+
+How should we think about the structure of HTML?
+
+--
+
+### Like a tree!
+
+Our \`<html>\` tag is the very root of the tree.
+It branches off into two smaller sections: \`<head>\` and \`<body>\`.
+
+Inside \`<head>\` we might have a few \`<meta>\` and \`<link>\` leaves,
+as well as the \`<title>\` leaf.
+
+Inside \`<body>\`, things can get very complicated.
+We can have simple \`<h1>\` leaves, or \`<p>\` branches with \`<a>\` leaves inside them.
+
+---
+
+class: grid-2
+
+.group[
+### A _family_ tree
+
+Instead of talking about _leaves_ and _branches_ when referring to an
+HTML document, we talk about **parents**, **children**, and **siblings**.
+]
+--
+
+<picture>
+<svg
+  version="1.1"
+  viewBox="0.0 0.0 960.4173228346457 512.2047244094488"
+  fill="none"
+  stroke="none"
+  stroke-linecap="square"
+  stroke-miterlimit="10"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <clipPath id="p.0">
+    <path
+      d="m0 0l960.4173 0l0 512.2047l-960.4173 0l0 -512.2047z"
+      clip-rule="nonzero"
+    />
+  </clipPath>
+  <g clip-path="url(#p.0)">
+    <path
+      fill="#000000"
+      fill-opacity="0.0"
+      d="m0 0l960.4173 0l0 512.2047l-960.4173 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#ffd966"
+      d="m198.40897 0l319.2441 0l0 122.23622l-319.2441 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#f1c232"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m198.40897 0l319.2441 0l0 122.23622l-319.2441 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      d="m332.30756 59.22561l-6.203125 2.28125l6.203125 2.265625l0 2.328125l-8.875 -3.375l0 -2.4375l8.875 -3.375l0 2.3125zm8.425079 -1.375q1.390625 0 2.53125 0.640625q1.15625 0.640625 1.8125 1.8125q0.65625 1.171875 0.65625 2.71875q0 1.546875 -0.65625 2.71875q-0.65625 1.15625 -1.8125 1.8125q-1.140625 0.640625 -2.53125 0.640625q-2.078125 0 -3.15625 -1.3125l0 1.15625l-2.78125 0l0 -13.84375l2.90625 0l0 4.875q1.109375 -1.21875 3.03125 -1.21875zm-0.515625 7.953125q1.125 0 1.84375 -0.75q0.71875 -0.765625 0.71875 -2.03125q0 -1.265625 -0.71875 -2.015625q-0.71875 -0.765625 -1.84375 -0.765625q-1.109375 0 -1.828125 0.765625q-0.71875 0.75 -0.71875 2.015625q0 1.265625 0.71875 2.03125q0.71875 0.75 1.828125 0.75zm12.232208 2.390625q-1.59375 0 -2.859375 -0.65625q-1.25 -0.671875 -1.96875 -1.84375q-0.703125 -1.1875 -0.703125 -2.671875q0 -1.5 0.703125 -2.671875q0.71875 -1.171875 1.96875 -1.828125q1.265625 -0.671875 2.859375 -0.671875q1.578125 0 2.828125 0.671875q1.25 0.65625 1.953125 1.828125q0.71875 1.171875 0.71875 2.671875q0 1.484375 -0.71875 2.671875q-0.703125 1.171875 -1.953125 1.84375q-1.25 0.65625 -2.828125 0.65625zm0 -2.390625q1.109375 0 1.828125 -0.75q0.71875 -0.765625 0.71875 -2.03125q0 -1.265625 -0.71875 -2.015625q-0.71875 -0.765625 -1.828125 -0.765625q-1.125 0 -1.859375 0.765625q-0.71875 0.75 -0.71875 2.015625q0 1.265625 0.71875 2.03125q0.734375 0.75 1.859375 0.75zm17.657349 -11.609375l0 13.84375l-2.78125 0l0 -1.15625q-1.078125 1.3125 -3.125 1.3125q-1.421875 0 -2.578125 -0.640625q-1.140625 -0.640625 -1.796875 -1.8125q-0.640625 -1.171875 -0.640625 -2.71875q0 -1.546875 0.640625 -2.71875q0.65625 -1.1875 1.796875 -1.8125q1.15625 -0.640625 2.578125 -0.640625q1.921875 0 3.0 1.21875l0 -4.875l2.90625 0zm-5.40625 11.609375q1.09375 0 1.828125 -0.75q0.734375 -0.765625 0.734375 -2.03125q0 -1.265625 -0.734375 -2.015625q-0.734375 -0.765625 -1.828125 -0.765625q-1.125 0 -1.859375 0.765625q-0.71875 0.75 -0.71875 2.015625q0 1.265625 0.71875 2.03125q0.734375 0.75 1.859375 0.75zm18.066376 -7.796875l-4.546875 10.640625q-0.6875 1.734375 -1.703125 2.4375q-1.015625 0.71875 -2.453125 0.71875q-0.78125 0 -1.546875 -0.25q-0.765625 -0.234375 -1.25 -0.65625l1.0625 -2.078125q0.34375 0.296875 0.78125 0.46875q0.4375 0.171875 0.859375 0.171875q0.59375 0 0.96875 -0.296875q0.375 -0.28125 0.671875 -0.953125l0.046875 -0.09375l-4.359375 -10.109375l3.015625 0l2.8125 6.796875l2.828125 -6.796875l2.8125 0zm9.875183 2.28125l0 2.4375l-8.875 3.375l0 -2.328125l6.21875 -2.265625l-6.21875 -2.28125l0 -2.3125l8.875 3.375z"
+      fill-rule="nonzero"
+    />
+    <path
+      fill="#93c47d"
+      d="m-0.006515748 202.22446l319.2441 0l0 122.236206l-319.2441 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#6aa84f"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m-0.006515748 202.22446l319.2441 0l0 122.236206l-319.2441 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      d="m148.54665 261.45007l-6.203125 2.28125l6.203125 2.265625l0 2.328125l-8.875 -3.375l0 -2.4375l8.875 -3.375l0 2.3125zm8.581345 -1.375q1.875 0 3.015625 1.125q1.15625 1.109375 1.15625 3.3125l0 5.75l-2.921875 0l0 -5.296875q0 -1.203125 -0.515625 -1.78125q-0.515625 -0.59375 -1.515625 -0.59375q-1.09375 0 -1.75 0.6875q-0.65625 0.671875 -0.65625 2.015625l0 4.96875l-2.90625 0l0 -13.84375l2.90625 0l0 4.84375q0.578125 -0.578125 1.390625 -0.875q0.828125 -0.3125 1.796875 -0.3125zm10.864929 -2.875l0 13.0625l-3.015625 0l0 -10.640625l-2.625 0l0 -2.421875l5.640625 0zm11.578873 5.3125l0 2.4375l-8.875 3.375l0 -2.328125l6.21875 -2.265625l-6.21875 -2.28125l0 -2.3125l8.875 3.375z"
+      fill-rule="nonzero"
+    />
+    <path
+      fill="#93c47d"
+      d="m439.12964 202.22446l319.24408 0l0 122.236206l-319.24408 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#6aa84f"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m439.12964 202.22446l319.24408 0l0 122.236206l-319.24408 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      d="m588.39166 261.45007l-6.203125 2.28125l6.203125 2.265625l0 2.328125l-8.875 -3.375l0 -2.4375l8.875 -3.375l0 2.3125zm12.596924 -1.21875l0 10.03125l-2.765625 0l0 -1.1875q-0.578125 0.640625 -1.375 1.0q-0.796875 0.34375 -1.734375 0.34375q-1.984375 0 -3.140625 -1.140625q-1.15625 -1.140625 -1.15625 -3.375l0 -5.671875l2.921875 0l0 5.234375q0 2.421875 2.03125 2.421875q1.046875 0 1.671875 -0.671875q0.640625 -0.6875 0.640625 -2.03125l0 -4.953125l2.90625 0zm2.7075195 -3.8125l2.90625 0l0 13.84375l-2.90625 0l0 -13.84375zm14.30304 6.09375l0 2.4375l-8.875 3.375l0 -2.328125l6.21875 -2.265625l-6.21875 -2.28125l0 -2.3125l8.875 3.375z"
+      fill-rule="nonzero"
+    />
+    <path
+      fill="#c27ba0"
+      d="m258.87515 426.17175l224.31494 0l0 85.85828l-224.31494 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#a64d79"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m258.87515 426.17175l224.31494 0l0 85.85828l-224.31494 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      d="m364.27322 467.20837l-6.203125 2.28125l6.203125 2.265625l0 2.328125l-8.875 -3.375l0 -2.4375l8.875 -3.375l0 2.3125zm2.4876099 -5.03125l2.90625 0l0 13.84375l-2.90625 0l0 -13.84375zm5.6155396 3.8125l2.90625 0l0 10.03125l-2.90625 0l0 -10.03125zm1.453125 -1.40625q-0.8125 0 -1.3125 -0.46875q-0.5 -0.46875 -0.5 -1.15625q0 -0.6875 0.5 -1.15625q0.5 -0.46875 1.3125 -0.46875q0.796875 0 1.296875 0.453125q0.515625 0.453125 0.515625 1.125q0 0.71875 -0.515625 1.203125q-0.5 0.46875 -1.296875 0.46875zm12.849915 3.6875l0 2.4375l-8.875 3.375l0 -2.328125l6.21875 -2.265625l-6.21875 -2.28125l0 -2.3125l8.875 3.375z"
+      fill-rule="nonzero"
+    />
+    <path
+      fill="#c27ba0"
+      d="m495.37048 426.17175l224.31494 0l0 85.85828l-224.31494 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#a64d79"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m495.37048 426.17175l224.31494 0l0 85.85828l-224.31494 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      d="m600.76855 467.20837l-6.203125 2.28125l6.203125 2.265625l0 2.328125l-8.875 -3.375l0 -2.4375l8.875 -3.375l0 2.3125zm2.4876099 -5.03125l2.90625 0l0 13.84375l-2.90625 0l0 -13.84375zm5.6155396 3.8125l2.90625 0l0 10.03125l-2.90625 0l0 -10.03125zm1.453125 -1.40625q-0.8125 0 -1.3125 -0.46875q-0.5 -0.46875 -0.5 -1.15625q0 -0.6875 0.5 -1.15625q0.5 -0.46875 1.3125 -0.46875q0.796875 0 1.296875 0.453125q0.515625 0.453125 0.515625 1.125q0 0.71875 -0.515625 1.203125q-0.5 0.46875 -1.296875 0.46875zm12.849915 3.6875l0 2.4375l-8.875 3.375l0 -2.328125l6.21875 -2.265625l-6.21875 -2.28125l0 -2.3125l8.875 3.375z"
+      fill-rule="nonzero"
+    />
+    <path
+      fill="#c27ba0"
+      d="m735.69257 426.17175l224.31494 0l0 85.85828l-224.31494 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#a64d79"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m735.69257 426.17175l224.31494 0l0 85.85828l-224.31494 0z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      d="m841.09064 467.20837l-6.203125 2.28125l6.203125 2.265625l0 2.328125l-8.875 -3.375l0 -2.4375l8.875 -3.375l0 2.3125zm2.4876099 -5.03125l2.90625 0l0 13.84375l-2.90625 0l0 -13.84375zm5.6155396 3.8125l2.90625 0l0 10.03125l-2.90625 0l0 -10.03125zm1.453125 -1.40625q-0.8125 0 -1.3125 -0.46875q-0.5 -0.46875 -0.5 -1.15625q0 -0.6875 0.5 -1.15625q0.5 -0.46875 1.3125 -0.46875q0.796875 0 1.296875 0.453125q0.515625 0.453125 0.515625 1.125q0 0.71875 -0.515625 1.203125q-0.5 0.46875 -1.296875 0.46875zm12.849915 3.6875l0 2.4375l-8.875 3.375l0 -2.328125l6.21875 -2.265625l-6.21875 -2.28125l0 -2.3125l8.875 3.375z"
+      fill-rule="nonzero"
+    />
+    <path
+      fill="#000000"
+      fill-opacity="0.0"
+      d="m358.031 122.23622l240.72443 80.0"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m358.031 122.23622l235.03058 78.10777"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linecap="butt"
+      d="m592.5407 201.91144l4.8273926 -0.13626099l-3.7855835 -2.9986267z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      fill-opacity="0.0"
+      d="m598.7517 324.46066l-227.71655 101.700806"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m598.7517 324.46066l-222.2381 99.25406"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linecap="butt"
+      d="m375.84003 422.20657l-3.4700623 3.3587341l4.8171997 -0.34243774z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      fill-opacity="0.0"
+      d="m598.7517 324.46066l8.787415 101.700806"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m598.7517 324.46066l8.270874 95.72305"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linecap="butt"
+      d="m605.37695 420.32593l2.036255 4.379059l1.2549438 -4.663452z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      fill-opacity="0.0"
+      d="m598.7517 324.46066l249.10236 101.700806"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m598.7517 324.46066l243.54749 99.43292"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linecap="butt"
+      d="m841.67487 425.42276l4.8257446 0.18612671l-3.5770874 -3.2445068z"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      fill-opacity="0.0"
+      d="m358.031 122.23622l-198.42519 80.0"
+      fill-rule="evenodd"
+    />
+    <path
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linejoin="round"
+      stroke-linecap="butt"
+      d="m358.031 122.23622l-192.86044 77.75644"
+      fill-rule="evenodd"
+    />
+    <path
+      fill="#000000"
+      stroke="#000000"
+      stroke-width="1.0"
+      stroke-linecap="butt"
+      d="m164.55293 198.46074l-3.5912628 3.228836l4.826523 -0.16500854z"
+      fill-rule="evenodd"
+    />
+  </g>
+</svg>
+
+</picture>
+
+---
+
+.exercise[
+Identify a parent-child relationship and
+a sibling-sibling relationship in the HTML below.
+]
+
+\`\`\`html
+<body>
+  <h1>I Am A Tree</h1>
+  <main>
+    <p>
+      I woke up one day to discover I was a tree.
+      I checked myself for all the indicators of being a tree.
+    </p>
+    <ul>
+      <li>Leaves</li>
+      <li>Branches</li>
+      <li>Trunk</li>
+      <li>Roots</li>
+      <li>Squirrels</li>
+      <li>Nuts</li>
+    </ul>
+  </main>
+</body>
+\`\`\`
+
+---
+
+class: middle center section-title
+layout: false
+
+# Common HTML Tags
+
+---
+
+template: template
+layout: true
+class: grid-3 grid-no-margins
+
+## Common \`<body>\` Tags
+
+.heading[
+  Element
+]
+
+.heading[
+  Description
+]
+
+.heading[
+  Example
+]
+
+---
+
+### h1
+
+Main headings
+
+\`\`\`html
+<h1>The Explorer</h1>
+\`\`\`
+
+### h2-h6
+
+Subheadings
+
+\`\`\`html
+<h2>Articles</h2>
+\`\`\`
+
+### p
+
+Paragraph of text
+
+\`\`\`html
+<p>When I was a young boy living in Hampshire…</p>
+\`\`\`
+
+### a
+
+Anchor tag for links
+
+\`\`\`html
+<a href="https://ga.co/">General Assembly</a>
+\`\`\`
+
+### img
+
+Images
+
+\`\`\`html
+<img src="my-profile-pic.jpg" />
+\`\`\`
+
+---
+
+### li
+
+List item
+
+.grid-row-span-2[
+\`\`\`html
+<ul>
+  <li>Tomato soup, 10 tins of</li>
+  <li>Mushroom soup, 8 tins of for consumption cold</li>
+  <li>Ice cream, vanilla, one large tub of</li>
+  <li>Magnesia, milk of, one bottle</li>
+</ul>
+\`\`\`
+]
+
+### ul
+
+Unordered list
+
+### ol
+
+Ordered list
+
+\`\`\`html
+<ol>
+  <li>Demand satisfaction</li>
+  <li>Grab a friend</li>
+  <li>Negotiate a time or place</li>
+  <li>Get a doctor on site</li>
+</ol>
+\`\`\`
+
+---
+
+template: template
+layout: true
+class: grid-3 grid-no-margins
+
+## Common \`<head>\` Tags
+
+.heading[
+  Element
+]
+
+.heading[
+  Description
+]
+
+.heading[
+  Example
+]
+
+---
+
+### link
+
+Link a style sheet (CSS) to your HTML.
+
+\`\`\`html
+<link href="css/style.css" />
+\`\`\`
+
+### title
+
+Website title that shows on the browser tab
+
+\`\`\`html
+<title>NewsBadger | UK News from a Badger</title>
+\`\`\`
+
+### meta
+
+Adds extra information helpful to browsers and machines
+
+\`\`\`html
+<meta charset="utf-8" />
+<meta property="og:title" content="Example">
+<meta property="twitter:url" content="https://www.example.com/">
+<meta property="twitter:title" content="Example">
+\`\`\`
+
+---
+
+template: template
+layout: false
+
+## Elements
+
+When we use a **tag**, we create an **element** in our HTML document.
+For elements inside the \`<body>\` element, this means they'll be elements visible on the page.
+
+Although we sometimes use the terms **tag** and **element** interchangeably,
+**tag** really only means the \`<thing>\` in angle brackets,
+whether it's an _opening_, _closing_ or _self-closing_ tag.
+
+**Element** refers to a specific part of the HTML, like a specific
+\`<p>\` paragraph element on the page,
+or even the whole \`<body>\` or \`<head>\` element.
+
+---
+
+class: middle center section-title
+layout: false
+
+# Exercises
+
+---
+
+template: template
+layout: true
+
+## Exercises!
+
+---
+
+.exercise.guided[
+Let's make a press release together!
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/press-release_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/yLYLmZb)
+- [Solution code](https://codepen.io/pataruco/pen/JjYjgza)
+
+---
+
+.exercise[
+Write up a cookie recipe as a webpage.
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/cookie-time_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/ExVxqBR)
+- [Solution code](https://codepen.io/pataruco/pen/BaoyBBj)
+
+---
+
+.exercise[
+Create a band page for Kässerole.
+]
+
+Find the starter code along with some solutions in [fewd-57-exercises][exercises],
+at _exercises/html-basics/kasserole_.
+
+Alternatively, see [@pataruco][pataruco]'s CodePen versions:
+
+- [Starter code](https://codepen.io/pataruco/pen/RwWwXOz)
+- [Solution code](https://codepen.io/pataruco/pen/yLYLmWX)
+
+---
+
+template: template
+layout: false
+
+## Key Takeaways
+
+- HTML is **content**
+- **tags** define and describe the content on a webpage
+- elements are **related** to each other
+  - as **parent-child** relationships
+  - or as **sibling** relationships
+
+---
+
+template: template
+layout: false
+
+## Next Time, on FEWD
+
+- Style!
+- **CSS** will add styling to our HTML elements
+- **CSS** rules use selectors to select which HTML elements to style
+
+That'll be [our second lesson][lesson-2].
+
+---
+
+layout: false
+class: title center middle
+
+# See you next time!
+
+[pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
+[exercises]: https://github.com/rjkerrison/fewd-57-exercises "rjkerrison/fewd-57-exercises on GitHub"
+[mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
+
+[lesson-2]: /fewd-57-slides/lessons/02-css.html "Lesson Two: CSS"
+`
+    </script>
+    <script type="text/javascript">
+      const slideshow = remark.create({
+        navigation: { scroll: false },
+        source: sourceContent,
+        countIncrementalSlides: false,
+        ratio: '16:9',
+        highlightLines: true,
+        highlightStyle: 'github',
+      })
+
+      document.querySelectorAll('.remark-slide input').forEach((el) => {
+        el.addEventListener('keypress', (event) => {
+          event.stopPropagation()
+        })
+      })
+    </script>
+  </body>
+</html>
