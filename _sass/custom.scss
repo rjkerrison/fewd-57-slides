@@ -6,9 +6,9 @@ ul.lessons,
 ol.lessons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
   justify-content: center;
-  justify-items: flex-start;
+  margin: 0;
 
   li {
     display: flex;

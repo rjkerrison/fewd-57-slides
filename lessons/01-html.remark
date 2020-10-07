@@ -3,19 +3,6 @@ layout: presentation
 title: Introduction to HTML
 ---
 
-class: title center middle
-
-# Introduction to HTML
-
----
-
-layout: true
-name: template
-
-{% include fewd-57-template.remark %}
-
----
-
 ## Lesson 1
 
 Our Learning Goals:

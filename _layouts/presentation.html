@@ -12,7 +12,21 @@
     ></script>
     <script type="text/javascript">
       // eslint-disable
-      const sourceContent = `{{ content | replace: "`", "\\`" }}`
+      const sourceContent = `
+
+class: title center middle
+
+# {{ page.title }}
+
+---
+
+name: template
+layout: true
+
+{% include fewd-57-template.remark %}
+
+---
+{{ content | replace: "`", "\\`" }}`
     </script>
     <script type="text/javascript">
       const slideshow = remark.create({
