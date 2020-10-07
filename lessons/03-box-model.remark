@@ -13,3 +13,81 @@ layout: false
 - Use margins and padding to create spacing between elements
 - Set the `display` property of elements to create page layouts
 
+---
+
+template: template
+layout: false
+
+## Previously, on FEWD
+
+- What are the two types of HTML tags?
+- What are the three parts of a CSS declaration?
+- What are some of the CSS selectors?
+- Who has discovered new CSS properties since last class?
+
+All of this was covered in [lesson two][lesson-2].
+
+---
+
+layout: false
+class: middle center section-title
+
+# Linking Files
+
+---
+
+layout: false
+template: template
+class: grid-2 grid-2-wide grid-no-margins
+
+## Linking Files
+
+.grid-column-span-2[
+Webpages need more than HTML.
+Enhance your websites with CSS, JS, images, videos, and hyperlinks.
+]
+
+.heading[
+Resource
+]
+
+.heading[
+Syntax
+]
+
+
+Style sheets
+
+```html
+<link rel="stylesheet" href="css/style.css" />
+```
+
+
+JavaScript
+
+<code class="html hljs xml remark-code"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/main.js"</span>&gt;</span><span class="actionscript">&lt;/<span class="hljs-name">script</span>&gt;</span></code>
+
+Images
+
+```html
+<img src="img/tacocat.png" />
+```
+
+Videos
+
+```html
+<video src="vid/ad-campaign.mp4"></video>
+```
+
+Other pages
+
+```html
+<a href="https://google.com">Google</a>
+```
+
+
+[pataruco]: https://github.com/pataruco "Pedro Martin on GitHub"
+[exercises]: https://github.com/rjkerrison/fewd-57-exercises "rjkerrison/fewd-57-exercises on GitHub"
+[mdn]: https://developer.mozilla.org "Mozilla Developer Network Homepage"
+
+[lesson-2]: {{site.baseurl}}/lessons/02-css.html "Lesson Two: CSS"
